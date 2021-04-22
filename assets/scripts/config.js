@@ -2,7 +2,7 @@
 
 let apiUrl
 const apiUrls = {
-  production: '<replace-with-heroku-url>',
+  production: 'https://bbeckford305.github.io/virtual-closet-client',
   development: 'http://localhost:4741'
 }
 
