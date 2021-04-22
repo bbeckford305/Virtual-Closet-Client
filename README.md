@@ -7,7 +7,7 @@ Have you ever spent more time than needed deciding what to wear? Then this app i
 ## Important Links
 * [Other Repo](https://github.com/bbeckford305/Virtual-Closet-API)
 * [Deployed API](https://virtual-closet-api.herokuapp.com/)
-* [Deployed Client](https://git.generalassemb.ly/ga-wdi-boston/express-api-deployment-guide)
+* [Deployed Client](https://bbeckford305.github.io/virtual-closet-client/)
 
 ## Planning Story
 
