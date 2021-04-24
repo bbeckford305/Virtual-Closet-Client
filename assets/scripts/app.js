@@ -12,3 +12,7 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#signoutButton').on('click', authEvents.onSignOut)
 })
+
+module.exports = {
+  host: 'https://virtual-closet-api.herokuapp.com/'
+}
