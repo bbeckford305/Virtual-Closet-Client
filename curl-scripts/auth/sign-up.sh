@@ -1,6 +1,8 @@
 #!/bin/bash
+API="https://virtual-closet-api.herokuapp.com"
+URL_PATH="/sign-up"
 
-curl "https://bbeckford305.github.io/Virtual-Closet-Client/" \
+curl "${API}${URL_PATH}" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \
