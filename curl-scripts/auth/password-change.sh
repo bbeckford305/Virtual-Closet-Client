@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "https://tic-tac-toe-api-development.herokuapp.com/change-password" \
+curl "https://bbeckford305.github.io/Virtual-Closet-Client/" \
   --include \
   --request PATCH \
   --header "Authorization: Bearer ${TOKEN}" \

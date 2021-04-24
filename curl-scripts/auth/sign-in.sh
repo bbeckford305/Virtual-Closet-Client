@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "http://localhost:4741" \
+curl "https://bbeckford305.github.io/Virtual-Closet-Client/" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \

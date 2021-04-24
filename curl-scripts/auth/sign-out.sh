@@ -1,7 +1,7 @@
 
 #!/bin/bash
 
-curl "https://tic-tac-toe-api-development.herokuapp.com/sign-out" \
+curl "https://bbeckford305.github.io/Virtual-Closet-Client/" \
 --include \
 --request DELETE \
 --header "Content-Type: application/json" \
