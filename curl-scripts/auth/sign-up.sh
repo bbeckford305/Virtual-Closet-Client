@@ -6,8 +6,8 @@ curl "https://bbeckford305.github.io/Virtual-Closet-Client/" \
   --header "Content-Type: application/json" \
   --data '{
     "credentials": {
-      "firstName": "'"${FNAME}"'",
-      "lastName": "'"${LNAME}"'",
+      "first_name": "'"${FNAME}"'",
+      "last_name": "'"${LNAME}"'",
       "email": "'"${EMAIL}"'",
       "password": "'"${PASSWORD}"'",
       "password_confirmation": "'"${PASSWORD}"'"
