@@ -14,35 +14,98 @@
     </head>
     <body>
       <h1>Virtual Closet</h1>
+      <h2>Welcome To Your Virtual Closet</h2>
+
+      <!--Entry Button-->
+      <button id="entryButton">Enter</button>
+
+      <h2 id="userMessage">User Virtual Closet</h2>
+
 
       <p id="message"></p>
       <!--Sign Up Button-->
       <p id="signupForm">Register To Create Your Closet</p>
       <form id="sign-up">
-        <input name="credentials[email]" type="email" placeholder="email" required>
-        <input name="credentials[password]" type="password" placeholder="password" required>
-        <input name="credentials[password_confirmation]" type="password" placeholder="password confirmation" required>
+        <input id="firstName" name="credentials[firstName]" type="text" placeholder="First Name" required>
+        <input name="credentials[lastName]" type="text" placeholder="Last Name" required>
+        <input name="credentials[email]" type="email" placeholder="Email" required>
+        <input name="credentials[password]" type="password" placeholder="Password" required>
+        <input name="credentials[password_confirmation]" type="password" placeholder="Password Confirmation" required>
         <input type="submit" value="Sign Up"/>
       </form>
 
       <!-- Sign In Button-->
       <p id="signinForm">Login</p>
       <form id="sign-in">
-        <input name="credentials[email]" type="email" placeholder="email" required>
-        <input name="credentials[password]" type="password" placeholder="password" required>
+        <input name="credentials[email]" type="email" placeholder="Email" required>
+        <input name="credentials[password]" type="password" placeholder="Password" required>
         <input type="submit" value="Sign In"/>
       </form>
 
       <!--Change Password Button-->
       <p id="passwordChangeForm">Change Your Password</p>
       <form id="change-password">
-        <input name="passwords[old]" type="password" placeholder="current password" required>
-        <input name="passwords[new]" type="password" placeholder="new password" required>
+        <input name="passwords[old]" type="password" placeholder="Current Password" required>
+        <input name="passwords[new]" type="password" placeholder="New Password" required>
         <input type="submit" value="Change Password"/>
       </form>
 
       <!--Sign out Button-->
       <button id="signoutButton">Sign Out</button>
+
+      <!--Create Outfit-->
+      <button id="createOutfitButton">Create Outfit</button>
+
+      <!--Add to Outfit-->
+      <button id="addToOutfitButton">Add To Outfit</button>
+
+      <!--Delete Garment-->
+      <button id="deleteGarmentButton">Delete Garment</button>
+
+      <!--Update Garment-->
+      <button id="updateGarmentButton">Update Garment</button>
+
+      <!--Garment Search Button 1-->
+      <button id="searchGarmentButton1">Search For Garment</button>
+
+      <!--Search Again-->
+      <button id="restartOutfitButton">Restart Outfit</button>
+
+      <!--Add Image-->
+      <button id="addImageButton">Add Image</button>
+
+      <!--Garment Add-->
+      <p id="garmentAdd">Add Your Garment</p>
+      <form id="garmentAddForm">
+        <input name="garment[type]" type="text" placeholder="Garment Type" required>
+        <input name="garment[color]" type="text" placeholder="Garment Color" required>
+        <input name="garment[cleaningMethod]" type="text" placeholder="Cleaning Method" required>
+        <input name="garment[cleaningStatus]" type="text" placeholder="Clean Status" required>
+        <input name="garment[wornDate]" type="text" placeholder="Worn Date" required>
+        <input name="garment[weather]" type="text" placeholder="Weather" required>
+        <input type="submit" value="Add Garment"/>
+      </form>
+
+      <!--Garment Search-->
+      <p id="garmentSearch">Search For Garment</p>
+      <form id="garmentSearchForm">
+        <input name="garment[type]" type="text" placeholder="Garment Type" required>
+        <input name="garment[color]" type="text" placeholder="Garment Color" required>
+        <input name="garment[weather]" type="text" placeholder="Weather" required>
+        <input type="submit" value="Garment Search"/>
+      </form>
+
+      <!--Garment Update-->
+      <p id="garmentUpdate">Update Garment</p>
+      <form id="garmentUpdateForm">
+        <input name="garment[cleaningStatus]" type="text" placeholder="Clean Status" required>
+        <input name="garment[wornDate]" type="text" placeholder="Worn Date" required>
+        <input type="submit" value="Update Garment"/>
+      </form>
+
+      <div id="garmentImage">
+        <img src="public/Images/thumbnail.jpg" alt="" />
+      </div>
 
     </body>
 </html>

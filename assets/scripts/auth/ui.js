@@ -4,7 +4,7 @@ const store = require('./../store')
 
 const onSignUpSuccess = function () {
   $('#message').text('Thank You For Registering')
-  // $('#sign-up').trigger('reset')
+  $('#sign-up').trigger('reset')
   // $('#signinButton2').show()
   // $('#signupForm').hide()
   // $('#sign-up').hide()
@@ -20,7 +20,7 @@ const onSignUpFailure = function () {
 const onSignInSuccess = function (response) {
   store.user = response.user
   $('#message').text('Signed In')
-  // $('#sign-in').trigger('reset')
+  $('#sign-in').trigger('reset')
   // $('#change-password').show()
   // $('#sign-up').hide()
   // $('#sign-in').hide()
