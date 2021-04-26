@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "https://bbeckford305.github.io/Virtual-Closet-Client/" \
+curl "${API}${URL_PATH}" \
   --include \
   --request PATCH \
   --header "Authorization: Bearer ${TOKEN}" \
