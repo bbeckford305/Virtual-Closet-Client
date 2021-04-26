@@ -1,1 +1,29 @@
 @import '~bootstrap/scss/bootstrap';
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Tangerine&display=swap');
+
+// Font Variables
+$tangerine: 'Tangerine', serif;
+
+//Color Variables
+$blushPink: #f2d9d9;
+$black: #ffffff;
+$white: #000000;
+
+body {
+  background-color: $blushPink;
+}
+
+h1{
+  font-family: $tangerine;
+  font-weight: normal;
+  font-size:8vw
+}
+
+#entryButton {
+  padding: 0;
+  border: none;
+  color: $white;
+  background-color: $blushPink
+}

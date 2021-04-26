@@ -3,7 +3,7 @@
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
 const authEvents = require('./auth/events.js')
-// const authGarments = require('./garment/events.js')
+const garmentEvents = require('./garment/events.js')
 // use require without a reference to ensure a file is bundled
 // require('./example')
 
@@ -36,6 +36,8 @@ $(() => {
   $('#garmentUpdateForm').hide()
   $('#garmentImage').hide()
   $('#userMessage').hide()
+  $('#garmentAddButton1').hide()
+  $('#garmentAddForm').on('submit', garmentEvents.onGarmentAdd)
 })
 
 // user clicks to start creating outfit
@@ -54,8 +56,19 @@ $('#searchGarmentButton1').on('click', onSearchGarment1)
 
 // user clicks to enter closet
 const onEnterCloset = (event) => {
-  $('#userMessage').show()
-  $('#createOutfitButton').show()
-  $('#searchGarmentButton1').show()
+  $('#signupForm').show()
+  $('#sign-up').show()
+  $('#signinForm').show()
+  $('#sign-in').show()
 }
 $('#entryButton').on('click', onEnterCloset)
+
+// user clicks to add garment
+const onAddGarmentButton = (event) => {
+  $('#garmentAdd').show()
+  $('#garmentAddForm').show()
+  $('#searchGarmentButton1').hide()
+  $('#createOutfitButton').hide()
+  $('#garmentAddButton1').hide()
+}
+$('#garmentAddButton1').on('click', onAddGarmentButton)
