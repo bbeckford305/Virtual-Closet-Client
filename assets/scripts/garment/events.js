@@ -19,16 +19,16 @@ const onGarmentAdd = function (event) {
     .then(ui.onGarmentAddSuccess)
     .catch(ui.onGarmentAddFailure)
 }
-//
-// const onSignIn = function (event) {
-//   event.preventDefault()
-//   const form = event.target
-//   const userInfo = getFormFields(form)
-//   api.signIn(userInfo)
-//     .then(ui.onSignInSuccess)
-//     .catch(ui.onSignInFailure)
-// }
-//
+// on garment search event
+const onGarmentSearch = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const garmentInfo = getFormFields(form)
+  api.garmentSearch(garmentInfo)
+    .then(ui.onGarmentSearchSuccess)
+    .catch(ui.onGarmentSearchFailure)
+}
+
 // const onChangePassword = function (event) {
 //   event.preventDefault()
 //   const form = event.target
@@ -48,8 +48,8 @@ const onGarmentAdd = function (event) {
 // }
 
 module.exports = {
-  onGarmentAdd
-  // onSignIn,
+  onGarmentAdd,
+  onGarmentSearch
   // onChangePassword,
   // onSignOut
 

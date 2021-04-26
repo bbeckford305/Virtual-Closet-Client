@@ -38,6 +38,7 @@ $(() => {
   $('#userMessage').hide()
   $('#garmentAddButton1').hide()
   $('#garmentAddForm').on('submit', garmentEvents.onGarmentAdd)
+  $('#garmentSearchForm').on('submit', garmentEvents.onGarmentSearch)
 })
 
 // user clicks to start creating outfit

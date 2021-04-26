@@ -22,10 +22,11 @@ const onGarmentAddFailure = function () {
   $('#garmentAddForm').trigger('reset')
 }
 
-// const onSignInSuccess = function (response) {
-//   store.user = response.user
-//   $('#message').text('Signed In')
-//   $('#sign-in').trigger('reset')
+// on successfull  garment search
+const onGarmentSearchSuccess = function (response) {
+  store.user.garment = response.garment
+  $('#message').text('Your Requested Garment')
+  $('#sign-in').trigger('reset')
 //   // $('#change-password').show()
 //   // $('#sign-up').hide()
 //   // $('#sign-in').hide()
@@ -39,12 +40,12 @@ const onGarmentAddFailure = function () {
 //   // $('#newGameButton').show()
 //   // $('#gameLogo').show()
 //   // $('.userDropDown').show()
-// }
+}
 //
-// const onSignInFailure = function () {
-//   $('#message').text('Email/Password Combination Incorrect')
-//   $('#sign-in').trigger('reset')
-// }
+const onGarmentSearchFailure = function () {
+  $('#message').text('Garment Not Found')
+  $('#sign-in').trigger('reset')
+}
 //
 // const onChangePasswordSuccess = function () {
 //   $('#message').text('Your Password Has Been Changed')
@@ -81,7 +82,9 @@ const onGarmentAddFailure = function () {
 
 module.exports = {
   onGarmentAddSuccess,
-  onGarmentAddFailure
+  onGarmentAddFailure,
+  onGarmentSearchSuccess,
+  onGarmentSearchFailure
   // onSignInSuccess,
   // onSignInFailure,
   // onChangePasswordSuccess,

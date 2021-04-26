@@ -14,13 +14,16 @@ const garmentAdd = function (garmentInfo) {
   })
 }
 
-// const signIn = function (userInfo) {
-//   return $.ajax({
-//     method: 'POST',
-//     url: config.apiUrl + '/sign-in',
-//     data: userInfo
-//   })
-// }
+const garmentSearch = function (id, garmentInfo) {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/garments/' + id,
+    data: garmentInfo,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
 //
 // const changePassword = function (userInfo) {
 //   return $.ajax({
@@ -43,7 +46,8 @@ const garmentAdd = function (garmentInfo) {
 // }
 
 module.exports = {
-  garmentAdd
+  garmentAdd,
+  garmentSearch
   // signIn,
   // changePassword,
   // signOut
