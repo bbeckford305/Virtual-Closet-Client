@@ -24,17 +24,12 @@ const onGarmentSearch = function (event) {
   event.preventDefault()
   const form = event.target
   const garmentInfo = getFormFields(form)
-  $(document).ready(function () {
-    $('#myInput').on('keyup', function () {
-      const value = $(this).val().toLowerCase()
-      $('#myTable tr').filter(function () {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-      })
-    })
-    api.garmentSearch(garmentInfo)
-      .then(ui.onGarmentSearchSuccess)
-      .catch(ui.onGarmentSearchFailure)
-  })
+  // const garmentType = $((event.target).text().toLowerCase().indexOf(event.target) > -1)
+  // const garmentColor = $((event.target).text().toLowerCase().indexOf(event.target) > -1)
+  // const garmentWeather = $((event.target).text().toLowerCase().indexOf(event.target) > -1)
+  api.garmentSearch(garmentInfo)
+    .then(ui.onGarmentSearchSuccess)
+    .catch(ui.onGarmentSearchFailure)
 }
 
 // const onChangePassword = function (event) {
