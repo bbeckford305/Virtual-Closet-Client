@@ -24,6 +24,7 @@ const garmentSearch = function (id, garmentInfo) {
     }
   })
 }
+
 //
 // const changePassword = function (userInfo) {
 //   return $.ajax({

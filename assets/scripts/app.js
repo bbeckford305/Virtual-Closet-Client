@@ -71,5 +71,6 @@ const onAddGarmentButton = (event) => {
   $('#searchGarmentButton1').hide()
   $('#createOutfitButton').hide()
   $('#garmentAddButton1').hide()
+  $('#garmentSearchForm').show()
 }
 $('#garmentAddButton1').on('click', onAddGarmentButton)
