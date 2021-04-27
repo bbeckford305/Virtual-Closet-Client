@@ -16669,6 +16669,7 @@ var onAddGarmentButton = function onAddGarmentButton(event) {
   $('#searchGarmentButton1').hide();
   $('#createOutfitButton').hide();
   $('#garmentAddButton1').hide();
+  $('#garmentSearchForm').show();
 };
 $('#garmentAddButton1').on('click', onAddGarmentButton);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(32)))
@@ -16853,7 +16854,7 @@ var onSignInSuccess = function onSignInSuccess(response) {
   // $('#entrySignIn').hide()
   // $('#entrySignInButton').hide()
   // $('#passwordChangeForm').show()
-  // $('#signoutButton').show()
+  $('#signoutButton').show();
   // $('#newGameButton').show()
   // $('#gameLogo').show()
   // $('.userDropDown').show()
@@ -16877,20 +16878,28 @@ var onChangePasswordFailure = function onChangePasswordFailure() {
 var onSignOutSuccess = function onSignOutSuccess() {
   store.user = null;
   $('#message').text('You Have Been Signed Out');
-  // $('#change-password').hide()
+  $('#change-password').hide();
   // $('#entryPage').show()
   // $('#entrySignIn').show()
   // $('#entryMessage').show()
   // $('#entryButton').show()
   // $('#entrySignInButton').show()
   // $('#gameLogo').hide()
-  // $('#passwordChangeForm').hide()
-  // $('#signoutButton').hide()
+  $('#passwordChangeForm').hide();
+  $('#signoutButton').hide();
+  $('#signoutButton').trigger('reset');
   // $('#newGameButton').hide()
   // $('.container').hide()
   // $('#newGameButton2').hide()
   // $('.box').trigger('reset')
   // $('.box').empty()
+  $('#userMessage').hide();
+  $('#createOutfitButton').hide();
+  $('#searchGarmentButton1').hide();
+  $('#garmentAddButton1').hide();
+  $('#change-password').hide();
+  $('#entryButton').show();
+  $('#entryMessage').show();
 };
 
 var onSignOutFailure = function onSignOutFailure() {
@@ -16940,6 +16949,9 @@ var onGarmentSearch = function onGarmentSearch(event) {
   event.preventDefault();
   var form = event.target;
   var garmentInfo = getFormFields(form);
+  // const garmentType = $((event.target).text().toLowerCase().indexOf(event.target) > -1)
+  // const garmentColor = $((event.target).text().toLowerCase().indexOf(event.target) > -1)
+  // const garmentWeather = $((event.target).text().toLowerCase().indexOf(event.target) > -1)
   api.garmentSearch(garmentInfo).then(ui.onGarmentSearchSuccess).catch(ui.onGarmentSearchFailure);
 };
 
@@ -16990,16 +17002,17 @@ var garmentAdd = function garmentAdd(garmentInfo) {
   });
 };
 
-var garmentSearch = function garmentSearch(id, garmentInfo) {
+var garmentSearch = function garmentSearch(garmentInfo) {
   return $.ajax({
     method: 'GET',
-    url: config.apiUrl + '/garments/' + id,
+    url: config.apiUrl + '/garments',
     data: garmentInfo,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     }
   });
 };
+
 //
 // const changePassword = function (userInfo) {
 //   return $.ajax({
