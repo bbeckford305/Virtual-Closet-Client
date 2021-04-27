@@ -9,12 +9,6 @@ const onGarmentAdd = function (event) {
   event.preventDefault()
   const form = event.target
   const garmentInfo = getFormFields(form)
-  // const type = $(event.target)
-  // const color = $(event.target)
-  // const cmethod = $(event.target)
-  // const cstatus = $(event.target)
-  // const wdate = $(event.target)
-  // const weather = $(event.target)
   api.garmentAdd(garmentInfo)
     .then(ui.onGarmentAddSuccess)
     .catch(ui.onGarmentAddFailure)
@@ -24,22 +18,20 @@ const onGarmentSearch = function (event) {
   event.preventDefault()
   const form = event.target
   const garmentInfo = getFormFields(form)
-  // const garmentType = $((event.target).text().toLowerCase().indexOf(event.target) > -1)
-  // const garmentColor = $((event.target).text().toLowerCase().indexOf(event.target) > -1)
-  // const garmentWeather = $((event.target).text().toLowerCase().indexOf(event.target) > -1)
   api.garmentSearch(garmentInfo)
     .then(ui.onGarmentSearchSuccess)
     .catch(ui.onGarmentSearchFailure)
 }
 
-// const onChangePassword = function (event) {
-//   event.preventDefault()
-//   const form = event.target
-//   const userInfo = getFormFields(form)
-//   api.changePassword(userInfo)
-//     .then(ui.onChangePasswordSuccess)
-//     .catch(ui.onChangePasswordFailure)
-// }
+// on garment update event
+const onGarmentUpdate = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const garmentInfo = getFormFields(form)
+  api.garmentUpdate(garmentInfo)
+    .then(ui.onGarmentUpdateSuccess)
+    .catch(ui.onGarmentUpdateFailure)
+}
 //
 // const onSignOut = function (event) {
 //   event.preventDefault()
@@ -52,7 +44,8 @@ const onGarmentSearch = function (event) {
 
 module.exports = {
   onGarmentAdd,
-  onGarmentSearch
+  onGarmentSearch,
+  onGarmentUpdate
   // onChangePassword,
   // onSignOut
 

@@ -13,13 +13,16 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Virtual Closet</h1>
+      <h1><button id="headerLogo" onclick = 'https://virtual-closet-api.herokuapp.com'>Virtual Closet</button></h1>
       <h2 id="entryMessage">Welcome To Your Virtual Closet</h2>
 
       <!--Entry Button-->
-      <button id="entryButton">Enter</button>
+      <button id="entryButton">Please Enter</button>
 
       <h2 id="userMessage">User Closet</h2>
+
+      <!--New User Button-->
+      <button id="newUserButton">New User</button>
 
 
       <p id="message"></p>
@@ -33,6 +36,9 @@
         <input name="credentials[password_confirmation]" type="password" placeholder="Password Confirmation" required>
         <input type="submit" value="Sign Up"/>
       </form>
+
+      <!--Returning User Button-->
+      <button id="returnUserButton">Returning User</button>
 
       <!-- Sign In Button-->
       <p id="signinForm">Login</p>
@@ -93,9 +99,9 @@
       <p id="garmentSearch">Search For Garment</p>
       <form id="garmentSearchForm">
         <input name="garment[id]" type="text" placeholder="Garment ID" required>
-        <!-- <input name="garment[type]" type="text" placeholder="Garment Type" required>
+        <input name="garment[type]" type="text" placeholder="Garment Type" required>
         <input name="garment[color]" type="text" placeholder="Garment Color" required>
-        <input name="garment[weather]" type="text" placeholder="Weather" required> -->
+        <input name="garment[weather]" type="text" placeholder="Weather" required>
         <input type="submit" value="Garment Search"/>
       </form>
 

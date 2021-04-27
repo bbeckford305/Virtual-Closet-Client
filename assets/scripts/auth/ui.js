@@ -37,8 +37,8 @@ const onSignInSuccess = function (response) {
   // $('#entrySignInButton').hide()
   // $('#passwordChangeForm').show()
   $('#signoutButton').show()
-  // $('#newGameButton').show()
-  // $('#gameLogo').show()
+  $('#deleteGarmentButton').show()
+  $('#updateGarmentButton').show()
   // $('.userDropDown').show()
 }
 

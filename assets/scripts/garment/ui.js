@@ -47,15 +47,16 @@ const onGarmentSearchFailure = function () {
   $('#sign-in').trigger('reset')
 }
 //
-// const onChangePasswordSuccess = function () {
-//   $('#message').text('Your Password Has Been Changed')
-//   $('#change-password').trigger('reset')
-// }
+const onGarmentUpdateSuccess = function (response) {
+  store.user.garment = response.garment
+  $('#message').text('Garment Has Been Updated')
+  $('#change-password').trigger('reset')
+}
 //
-// const onChangePasswordFailure = function () {
-//   $('#message').text('Password Change Failed')
-//   $('#change-password').trigger('reset')
-// }
+const onGarmentUpdateFailure = function () {
+  $('#message').text('Garment Update Failed')
+  $('#change-password').trigger('reset')
+}
 //
 // const onSignOutSuccess = function () {
 //   store.user = null
@@ -84,7 +85,9 @@ module.exports = {
   onGarmentAddSuccess,
   onGarmentAddFailure,
   onGarmentSearchSuccess,
-  onGarmentSearchFailure
+  onGarmentSearchFailure,
+  onGarmentUpdateSuccess,
+  onGarmentUpdateFailure
   // onSignInSuccess,
   // onSignInFailure,
   // onChangePasswordSuccess,

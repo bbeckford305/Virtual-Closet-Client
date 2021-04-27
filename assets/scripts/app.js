@@ -37,8 +37,11 @@ $(() => {
   $('#garmentImage').hide()
   $('#userMessage').hide()
   $('#garmentAddButton1').hide()
+  $('#newUserButton').hide()
+  $('#returnUserButton').hide()
   $('#garmentAddForm').on('submit', garmentEvents.onGarmentAdd)
   $('#garmentSearchForm').on('submit', garmentEvents.onGarmentSearch)
+  $('#garmentUpdateForm').on('submit', garmentEvents.onGarmentUpdate)
 })
 
 // user clicks to start creating outfit
@@ -57,10 +60,9 @@ $('#searchGarmentButton1').on('click', onSearchGarment1)
 
 // user clicks to enter closet
 const onEnterCloset = (event) => {
-  $('#signupForm').show()
-  $('#sign-up').show()
-  $('#signinForm').show()
-  $('#sign-in').show()
+  $('#newUserButton').show()
+  $('#returnUserButton').show()
+  $('#entryButton').hide()
 }
 $('#entryButton').on('click', onEnterCloset)
 
@@ -74,3 +76,33 @@ const onAddGarmentButton = (event) => {
   $('#garmentSearchForm').show()
 }
 $('#garmentAddButton1').on('click', onAddGarmentButton)
+
+// user new user clicks
+const onNewUser = (event) => {
+  $('#signupForm').show()
+  $('#sign-up').show()
+  $('#newUserButton').hide()
+  $('#returnUserButton').hide()
+}
+$('#newUserButton').on('click', onNewUser)
+
+// user new user clicks
+const onReturnUser = (event) => {
+  $('#signinForm').show()
+  $('#sign-in').show()
+  $('#signupForm').hide()
+  $('#sign-up').hide()
+  $('#newUserButton').hide()
+  $('#returnUserButton').hide()
+}
+$('#returnUserButton').on('click', onReturnUser)
+
+
+// user update garment
+const onUpdateGarmentButton = (event) => {
+  $('#garmentUpdate').show()
+  $('#garmentUpdateForm').show()
+}
+$('#updateGarmentButton').on('click', onUpdateGarmentButton)
+// // user new user clicks
+// $('#headerLogo').on('click', <a href="https://virtual-closet-api.herokuapp.com">Continue</a>)
