@@ -14,10 +14,10 @@ const garmentAdd = function (garmentInfo) {
   })
 }
 
-const garmentSearch = function (id, garmentInfo) {
+const garmentSearch = function (garmentInfo) {
   return $.ajax({
     method: 'GET',
-    url: config.apiUrl + '/garments/' + id,
+    url: config.apiUrl + '/garments',
     data: garmentInfo,
     headers: {
       Authorization: 'Bearer ' + store.user.token
