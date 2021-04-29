@@ -13,11 +13,12 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1><button id="headerLogo" onclick = 'https://virtual-closet-api.herokuapp.com'>Virtual Closet</button></h1>
-      <h2 id="entryMessage">Welcome To Your Virtual Closet</h2>
+      <h1 id="headerLogo">Virtual Closet</h1>
 
       <!--Entry Button-->
-      <button id="entryButton">Please Enter</button>
+      <button id="entryButton">Enter</button>
+
+      <h2 id="entryMessage">Welcome To Your Virtual Closet</h2>
 
       <h2 id="userMessage">User Closet</h2>
 
@@ -116,6 +117,50 @@
       <div id="garmentImage">
         <img src="public/Images/thumbnail.jpg" alt="" />
       </div>
+
+      <div class="flex-container">
+         <div class="flex-items"></div>
+         <div class="flex-items"></div>
+         <div class="flex-items"></div>
+         <div class="flex-items"></div>
+         <div class="flex-items"></div>
+         <div class="flex-items"></div>
+         <div class="flex-items"></div>
+         <div class="flex-items"></div>
+         <div class="flex-items"></div>
+         <div class="flex-items"></div>
+         <div class="flex-items"></div>
+         <div class="flex-items"></div>
+      </div>
+
+      <nav id='menu'>
+        <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+        <ul>
+          <li><a href='http://'>Home</a></li>
+          <li><a class='closetTab'>Personal Closet</a>
+            <ul class='subMenu'>
+              <li><a href='https://www.youtube.com/'>Create Outfit</a></li>
+              <li><a href='https://www.youtube.com/'>Garment Search</a></li>
+              <li><a href='https://www.youtube.com/'>Add Garment</a></li>
+            </ul>
+          </li>
+          <li><a class='accountArea'>Account</a>
+            <ul class='subMenu'>
+              <li><a href='https://www.youtube.com/'>Change Password</a></li>
+              <li><a href='https://www.youtube.com/'>Sign Out</a></li>
+            </ul>
+          </li>
+          <li><a class='socialMedia'>Social Media</a>
+            <ul class='subMenu'>
+              <li><a href='https://www.youtube.com/'>YouTube</a></li>
+              <li><a href='https://www.instagram.com/'>Instagram</a></li>
+              <li><a href='https://www.facebook.com/'>Facebook</a></li>
+              <li><a href='https://www.pinterest.com/'>Pinterest</a></li>
+            </ul>
+          </li>
+          <li><a href='http://'>Contact Us</a></li>
+        </ul>
+      </nav>
 
     </body>
 </html>
