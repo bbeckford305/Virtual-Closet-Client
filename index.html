@@ -13,6 +13,11 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+
+      <audio autoplay loop>
+          <source src="public/audios/Bach-The-Violin-Concertos.mp3" type="audio/mpeg">
+      </audio>
+
       <h1 id="headerLogo">Virtual Closet</h1>
 
       <!--Entry Button-->
@@ -28,15 +33,36 @@
 
       <p id="message"></p>
       <!--Sign Up Button-->
-      <p id="signupForm">Register To Create Your Closet</p>
-      <form id="sign-up">
-        <input id="firstName" name="credentials[firstName]" type="text" placeholder="First Name" required>
-        <input name="credentials[lastName]" type="text" placeholder="Last Name" required>
-        <input name="credentials[email]" type="email" placeholder="Email" required>
-        <input name="credentials[password]" type="password" placeholder="Password" required>
-        <input name="credentials[password_confirmation]" type="password" placeholder="Password Confirmation" required>
-        <input type="submit" value="Sign Up"/>
-      </form>
+
+
+          <form id="sign-up">
+            <!-- <p id="signupForm">Register To Create Your Closet</p> -->
+            <div class="signupform1 row ">
+              <div class="form-group col-md-6">
+                <label for="inputFirstName">First Name</label>
+                <input id="inputFirstName" name="credentials[firstName]" type="text" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputLastName">Last Name</label>
+                <input id="inputLastName" name="credentials[lastName]" type="text" required>
+              </div>
+            </div>
+              <div class="form-group col-10">
+                <label for="inputEmail">Email</label>
+                <input id="inputEmail" name="credentials[email]" type="email" required>
+              </div>
+            <div class="password-row">
+              <div class="form-group col-md-6">
+                <label for="inputPassword">Password</label>
+                <input id="inputPassword" name="credentials[password]" type="password" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPasswordConfirm">Confirm Password</label>
+                <input id="inputPasswordConfirm" name="credentials[password_confirmation]" type="password" required>
+              </div>
+            </div>
+              <input id="registerButton" type="submit" value="Register"/>
+          </form>
 
       <!--Returning User Button-->
       <button id="returnUserButton">Returning User</button>
@@ -118,7 +144,7 @@
         <img src="public/Images/thumbnail.jpg" alt="" />
       </div>
 
-      <div class="flex-container">
+      <!-- <div class="flex-container">
          <div class="flex-items"></div>
          <div class="flex-items"></div>
          <div class="flex-items"></div>
@@ -131,7 +157,7 @@
          <div class="flex-items"></div>
          <div class="flex-items"></div>
          <div class="flex-items"></div>
-      </div>
+      </div> -->
 
       <nav id='menu'>
         <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
@@ -160,6 +186,10 @@
           </li>
           <li><a href='http://'>Contact Us</a></li>
         </ul>
+        <!-- <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form> -->
       </nav>
 
     </body>

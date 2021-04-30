@@ -8,7 +8,7 @@ const onSignUpSuccess = function () {
   // $('#signinButton2').show()
   $('#signupForm').hide()
   $('#sign-up').hide()
-  // $('#sign-in').show()
+  $('#sign-in').show()
   // $('#signinForm').show()
 }
 
@@ -33,6 +33,8 @@ const onSignInSuccess = function (response) {
   $('#signupForm').hide()
   $('#signinForm').hide()
   $('#entryButton').hide()
+  $('#menu').show()
+  $('#headerLogo').hide()
   // $('#entrySignIn').hide()
   // $('#entrySignInButton').hide()
   // $('#passwordChangeForm').show()
@@ -61,6 +63,8 @@ const onSignOutSuccess = function () {
   store.user = null
   $('#message').text('You Have Been Signed Out')
   $('#change-password').hide()
+  $('#menu').hide()
+  $('#headerLogo').show()
   // $('#entryPage').show()
   // $('#entrySignIn').show()
   // $('#entryMessage').show()

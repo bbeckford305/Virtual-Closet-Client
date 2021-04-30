@@ -1,10 +1,18 @@
 @import '~bootstrap/scss/bootstrap';
 
 // Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ovo&display=swap');
 
 // Font Variables
 $tangerine: 'Tangerine', serif;
+$greatVibe: 'Great Vibes', cursive;
+$paris: 'Parisienne', cursive;
+$monsieur: 'Monsieur La Doulaise', cursive;
+$ovo: 'Ovo', serif;
 
 //Color Variables
 $blushPink: #f2d9d9;
@@ -14,16 +22,18 @@ $mediumGray: #737373;
 $lightGray: #F2F2F2;
 $trolleyGray: #808080;
 $darkGray: #111111;
+$roseGold: #ff9985;
+$pinktransparent: rgba(242, 217, 217, 0.7);
 
 html {
    margin: 0px;
    height: 100%;
    width: 100%;
-   // position:relative;
+   position:relative;
 }
 
 body {
-  background-image:url(public/Images/Background-Image.jpg);
+  background-image:url(public/Images/Background-Image-three.jpg);
   background-repeat: no-repeat;
   background-color: $blushPink;
   background-position: center;
@@ -35,12 +45,13 @@ body {
 }
 
 h1{
-  font-family: $tangerine;
+  font-family: $paris;
   font-weight: normal;
-  font-size:100px;
-  margin-top: 70px;
-  position: absolute;
-  left: 320px;
+  font-size: 90px;
+  width: auto;
+  height: auto;
+  line-height: 230px;
+  text-align: center;
 }
 
 // #headerLogo {
@@ -51,16 +62,65 @@ h1{
 // }
 
 #entryButton {
+  font-family: $ovo;
   padding: 0;
   border: none;
   color: $black;
+  font-size: 25px;
+  font-weight: bold;
   background-color: transparentize($white, 1);
-  margin-top: -10px;
-  position: relative;
-  left: 500px;
-  // align-content: center;
-  // align-items: center;
+  position: fixed;
+  top: 49%;
+  left:18.7%;
+  transform: rotate(90deg);
 }
+
+#newUserButton{
+  font-family:$paris;
+  padding: 0;
+  border: none;
+  color: $black;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: transparentize($white, 1);
+  position: fixed;
+  width: auto;
+  height: auto;
+  right: 20.5%;
+  top: 47%
+  // line-height: 230px;
+}
+
+#returnUserButton{
+  font-family: $paris;
+  padding: 0;
+  border: none;
+  color: $black;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: transparentize($white, 1);
+  position: fixed;
+  width: auto;
+  height: auto;
+  right: 2.5%;
+  bottom: 22%
+
+}
+
+#signupForm {
+  font-family: $paris;
+  color: $black;
+  font-size: 20px;
+  font-weight: bold;
+  // text-align: center;
+  display: flex;
+  // justify-content: center;
+  align-self: center;
+}
+
+// .signupform1 {
+//   width: 50%
+// }
 // .pageLayout {
 //   display: flex;
 // flex: 1;
@@ -68,6 +128,28 @@ h1{
 // min-height: 100vh;
 // width: 100%
 // }
+
+#sign-up {
+  background: $pinktransparent;
+  padding: 2;
+  border: 2px solid $mediumGray;
+  border-radius: 5px;
+  width: 60%;
+  height: auto;
+  // display: flex;
+  // justify-content: center;
+  // align-content: center;
+
+}
+
+#registerButton {
+  color: $black;
+  font-family: $ovo;
+  background-color: $roseGold;
+  font-weight: bold;
+  right: 0;
+
+  }
 
 .flex-container {
   display: flex;

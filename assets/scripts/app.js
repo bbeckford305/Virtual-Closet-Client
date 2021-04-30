@@ -39,6 +39,7 @@ $(() => {
   $('#garmentAddButton1').hide()
   $('#newUserButton').hide()
   $('#returnUserButton').hide()
+  $('#menu').hide()
   $('#entryMessage').hide()
   $('#garmentAddForm').on('submit', garmentEvents.onGarmentAdd)
   $('#garmentSearchForm').on('submit', garmentEvents.onGarmentSearch)
@@ -107,11 +108,11 @@ $('#updateGarmentButton').on('click', onUpdateGarmentButton)
 // // user new user clicks
 // $('#headerLogo').on('click', <a href="https://virtual-closet-api.herokuapp.com">Continue</a>)
 
-function updatemenu () {
-  if (document.getElementById('responsive-menu').checked === true) {
-    document.getElementById('menu').style.borderBottomRightRadius = '0'
-    document.getElementById('menu').style.borderBottomLeftRadius = '0'
-  } else {
-    document.getElementById('menu').style.borderRadius = '43px'
-  }
-}
+// function updatemenu () {
+//   if (document.getElementById('responsive-menu').checked === true) {
+//     document.getElementById('menu').style.borderBottomRightRadius = '0'
+//     document.getElementById('menu').style.borderBottomLeftRadius = '0'
+//   } else {
+//     document.getElementById('menu').style.borderRadius = '43px'
+//   }
+// }
