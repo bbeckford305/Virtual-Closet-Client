@@ -88,7 +88,6 @@ h1{
   height: auto;
   right: 20.5%;
   top: 47%
-  // line-height: 230px;
 }
 
 #returnUserButton{
@@ -112,9 +111,8 @@ h1{
   color: $black;
   font-size: 20px;
   font-weight: bold;
-  // text-align: center;
   display: flex;
-  // justify-content: center;
+  justify-content: center;
   align-self: center;
 }
 
@@ -128,19 +126,79 @@ h1{
 // min-height: 100vh;
 // width: 100%
 // }
+#signupform1 {
+  width: 80%;
+  min-height: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex: 1;
+}
+
+#password {
+  width: 70%;
+  min-height: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex: 1;
+
+}
+
+
+#inputEmail {
+  width: 70%;
+  min-height: 20px;
+  margin: 0 auto;
+  display: flex;
+  flex: 1;
+  align-self: stretch;
+
+}
 
 #sign-up {
   background: $pinktransparent;
-  padding: 2;
-  border: 2px solid $mediumGray;
+  padding: 4px;
+  border: 3px solid $mediumGray;
   border-radius: 5px;
-  width: 60%;
-  height: auto;
+  width: 50%;
+  // height: 30%;
+  margin: auto;
   // display: flex;
   // justify-content: center;
   // align-content: center;
 
 }
+#signinForm {
+  font-family: $paris;
+  color: $black;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+#signinform1 {
+  width: 80%;
+  min-height: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex: 1;
+}
+
+#sign-in {
+  background: $pinktransparent;
+  padding: 4px;
+  border: 3px solid $mediumGray;
+  border-radius: 5px;
+  width: 50%;
+  // height: 30%;
+  margin: auto;
+  // display: flex;
+  // justify-content: center;
+  // align-content: center;
+
+}
+
 
 #registerButton {
   color: $black;
@@ -148,8 +206,19 @@ h1{
   background-color: $roseGold;
   font-weight: bold;
   right: 0;
+  align-items: flex-end;
 
   }
+
+  #loginButton {
+    color: $black;
+    font-family: $ovo;
+    background-color: $roseGold;
+    font-weight: bold;
+    right: 0;
+    align-items: flex-end;
+    right: 2.5%;
+    }
 
 .flex-container {
   display: flex;

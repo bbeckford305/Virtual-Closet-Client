@@ -36,9 +36,9 @@
 
 
           <form id="sign-up">
-            <!-- <p id="signupForm">Register To Create Your Closet</p> -->
-            <div class="signupform1 row ">
-              <div class="form-group col-md-6">
+            <p id="signupForm">Register To Create Your Closet</p>
+            <div class="signupform1 row">
+              <div class="form-group col-md-6 ">
                 <label for="inputFirstName">First Name</label>
                 <input id="inputFirstName" name="credentials[firstName]" type="text" required>
               </div>
@@ -47,11 +47,11 @@
                 <input id="inputLastName" name="credentials[lastName]" type="text" required>
               </div>
             </div>
-              <div class="form-group col-10">
+              <div class="form-group col-md-8">
                 <label for="inputEmail">Email</label>
                 <input id="inputEmail" name="credentials[email]" type="email" required>
               </div>
-            <div class="password-row">
+            <div class="password row">
               <div class="form-group col-md-6">
                 <label for="inputPassword">Password</label>
                 <input id="inputPassword" name="credentials[password]" type="password" required>
@@ -68,11 +68,20 @@
       <button id="returnUserButton">Returning User</button>
 
       <!-- Sign In Button-->
-      <p id="signinForm">Login</p>
+
       <form id="sign-in">
-        <input name="credentials[email]" type="email" placeholder="Email" required>
-        <input name="credentials[password]" type="password" placeholder="Password" required>
-        <input type="submit" value="Sign In"/>
+        <p id="signinForm">Login</p>
+        <div class="signinform1 row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail2">Email</label>
+            <input id="inputEmail2" name="credentials[email]" type="email" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword2">Password</label>
+            <input id="inputPassword2" name="credentials[password]" type="password" required>
+          </div>
+        </div>
+        <input id="loginButton" type="submit" value="Login"/>
       </form>
 
       <!--Change Password Button-->
