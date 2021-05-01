@@ -5,11 +5,13 @@ const store = require('./../store')
 const onSignUpSuccess = function () {
   $('#message').text('Thank You For Registering')
   $('#sign-up').trigger('reset')
-  // $('#signinButton2').show()
   $('#signupForm').hide()
   $('#sign-up').hide()
   $('#sign-in').show()
-  // $('#signinForm').show()
+
+  setTimeout(function () {
+    $('#message').fadeOut().empty()
+  }, 3000)
 }
 
 const onSignUpFailure = function () {
@@ -35,50 +37,54 @@ const onSignInSuccess = function (response) {
   $('#entryButton').hide()
   $('#menu').show()
   $('#headerLogo').hide()
-  // $('#entrySignIn').hide()
-  // $('#entrySignInButton').hide()
-  // $('#passwordChangeForm').show()
+  $('#deleteGarmentButton').hide()
+  $('#updateGarmentButton').hide()
+  $('#passwordChangeForm').hide()
+  $('#change-password').hide()
   $('#signoutButton').show()
-  $('#deleteGarmentButton').show()
-  $('#updateGarmentButton').show()
-  // $('.userDropDown').show()
+  $('#deleteGarmentButton').hide()
+  $('#updateGarmentButton').hide()
+  $('#youTubeVideos').show()
+  $('#backgroundMusic').stop()
+  $('#backgroundMusic').trigger('pause')
+  setTimeout(function () {
+    $('#message').fadeOut().empty()
+  }, 3000)
 }
 
 const onSignInFailure = function () {
   $('#message').text('Email/Password Combination Incorrect')
   $('#sign-in').trigger('reset')
+  setTimeout(function () {
+    $('#message').fadeOut().empty()
+  }, 3000)
 }
 
 const onChangePasswordSuccess = function () {
   $('#message').text('Your Password Has Been Changed')
   $('#change-password').trigger('reset')
+  setTimeout(function () {
+    $('#message').fadeOut().empty()
+  }, 3000)
 }
 
 const onChangePasswordFailure = function () {
   $('#message').text('Password Change Failed')
   $('#change-password').trigger('reset')
+  setTimeout(function () {
+    $('#message').fadeOut().empty()
+  }, 3000)
 }
 
 const onSignOutSuccess = function () {
   store.user = null
   $('#message').text('You Have Been Signed Out')
+  $('#signoutButton').trigger('reset')
   $('#change-password').hide()
   $('#menu').hide()
   $('#headerLogo').show()
-  // $('#entryPage').show()
-  // $('#entrySignIn').show()
-  // $('#entryMessage').show()
-  // $('#entryButton').show()
-  // $('#entrySignInButton').show()
-  // $('#gameLogo').hide()
   $('#passwordChangeForm').hide()
   $('#signoutButton').hide()
-  $('#signoutButton').trigger('reset')
-  // $('#newGameButton').hide()
-  // $('.container').hide()
-  // $('#newGameButton2').hide()
-  // $('.box').trigger('reset')
-  // $('.box').empty()
   $('#userMessage').hide()
   $('#createOutfitButton').hide()
   $('#searchGarmentButton1').hide()
@@ -86,10 +92,30 @@ const onSignOutSuccess = function () {
   $('#change-password').hide()
   $('#entryButton').show()
   $('#entryMessage').show()
+  $('#sign-up').hide()
+  $('#sign-in').hide()
+  $('#signupForm').hide()
+  $('#signinForm').hide()
+  $('#deleteGarmentButton').hide()
+  $('#updateGarmentButton').hide()
+  $('#garmentUpdateForm').hide()
+  $('#garmentSearchForm').hide()
+  $('#garmentAddForm').hide()
+  $('#entryMessage').hide()
+  $('#youTubeVideos').hide()
+  $('#garmentAdd').hide()
+  $('#garmentSearch').hide()
+  $('#backgroundMusic').trigger('play')
+  setTimeout(function () {
+    $('#message').fadeOut().empty()
+  }, 3000)
 }
 
 const onSignOutFailure = function () {
   $('#message').text('Please Try Signing Out Again')
+  setTimeout(function () {
+    $('#message').fadeOut().empty()
+  }, 3000)
 }
 
 module.exports = {

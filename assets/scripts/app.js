@@ -44,12 +44,14 @@ $(() => {
   $('#garmentAddForm').on('submit', garmentEvents.onGarmentAdd)
   $('#garmentSearchForm').on('submit', garmentEvents.onGarmentSearch)
   $('#garmentUpdateForm').on('submit', garmentEvents.onGarmentUpdate)
+  $('#youTubeVideos').hide()
 })
 
 // user clicks to start creating outfit
 const onCreateOutfit = (event) => {
   $('#garmentSearch').show()
   $('#garmentSearchForm').show()
+  $('#youTubeVideos').hide()
 }
 $('#createOutfitButton').on('click', onCreateOutfit)
 
@@ -57,6 +59,7 @@ $('#createOutfitButton').on('click', onCreateOutfit)
 const onSearchGarment1 = (event) => {
   $('#garmentSearch').show()
   $('#garmentSearchForm').show()
+  $('#youTubeVideos').hide()
 }
 $('#searchGarmentButton1').on('click', onSearchGarment1)
 
@@ -76,6 +79,7 @@ const onAddGarmentButton = (event) => {
   $('#createOutfitButton').hide()
   $('#garmentAddButton1').hide()
   $('#garmentSearchForm').show()
+  $('#youTubeVideos').hide()
 }
 $('#garmentAddButton1').on('click', onAddGarmentButton)
 
@@ -105,6 +109,15 @@ const onUpdateGarmentButton = (event) => {
   $('#garmentUpdateForm').show()
 }
 $('#updateGarmentButton').on('click', onUpdateGarmentButton)
+
+// user clicks to start creating outfit
+const onChangePasswordRequest = (event) => {
+  $('#passwordChangeForm').show()
+  $('#change-password').show()
+  $('#youTubeVideos').hide()
+}
+$('#changePasswordButton1').on('click', onChangePasswordRequest)
+
 // // user new user clicks
 // $('#headerLogo').on('click', <a href="https://virtual-closet-api.herokuapp.com">Continue</a>)
 

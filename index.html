@@ -14,10 +14,11 @@
     </head>
     <body>
 
-      <audio autoplay loop>
+      <audio id="backgroundMusic" autoplay loop>
           <source src="public/audios/Bach-The-Violin-Concertos.mp3" type="audio/mpeg">
       </audio>
 
+      <!--Entry Message-->
       <h1 id="headerLogo">Virtual Closet</h1>
 
       <!--Entry Button-->
@@ -47,8 +48,8 @@
                 <input id="inputLastName" name="credentials[lastName]" type="text" required>
               </div>
             </div>
-              <div class="form-group col-md-8">
-                <label for="inputEmail">Email</label>
+              <div class="form-group col-8">
+                <label id="emailWord" for="inputEmail">Email</label>
                 <input id="inputEmail" name="credentials[email]" type="email" required>
               </div>
             <div class="password row">
@@ -93,16 +94,16 @@
       </form>
 
       <!--Sign out Button-->
-      <button id="signoutButton">Sign Out</button>
+      <!-- <button id="signoutButton">Sign Out</button> -->
 
       <!--Create Outfit-->
-      <button id="createOutfitButton">Create Outfit</button>
+      <!-- <button id="createOutfitButton">Create Outfit</button> -->
 
       <!--Add to Outfit-->
       <button id="addToOutfitButton">Add To Outfit</button>
 
       <!--Add A Garment-->
-      <button id="garmentAddButton1">Add Garment</button>
+      <!-- <button id="garmentAddButton1">Add Garment</button> -->
 
       <!--Delete Garment-->
       <button id="deleteGarmentButton">Delete Garment</button>
@@ -111,7 +112,7 @@
       <button id="updateGarmentButton">Update Garment</button>
 
       <!--Garment Search Button 1-->
-      <button id="searchGarmentButton1">Search For Garment</button>
+      <!-- <button id="searchGarmentButton1">Search For Garment</button> -->
 
       <!--Search Again-->
       <button id="restartOutfitButton">Restart Outfit</button>
@@ -169,24 +170,23 @@
       </div> -->
 
       <nav id='menu'>
-        <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
         <ul>
-          <li><a href='http://'>Home</a></li>
+          <li><a href='http://localhost:7165/'>Home</a></li>
           <li><a class='closetTab'>Personal Closet</a>
             <ul class='subMenu'>
-              <li><a href='https://www.youtube.com/'>Create Outfit</a></li>
-              <li><a href='https://www.youtube.com/'>Garment Search</a></li>
-              <li><a href='https://www.youtube.com/'>Add Garment</a></li>
+              <li><button id="createOutfitButton">Create Outfit</button></li>
+              <li><button id="searchGarmentButton1">Search For Garment</button></li>
+              <li><button id="garmentAddButton1">Add Garment</button></li>
             </ul>
           </li>
           <li><a class='accountArea'>Account</a>
             <ul class='subMenu'>
-              <li><a href='https://www.youtube.com/'>Change Password</a></li>
-              <li><a href='https://www.youtube.com/'>Sign Out</a></li>
+              <li><button id="changePasswordButton1">Change Password</button></li>
+              <li><button id="signoutButton">Sign Out</button></li>
             </ul>
           </li>
           <li><a class='socialMedia'>Social Media</a>
-            <ul class='subMenu'>
+            <ul id="socialMediaSub" class='subMenu'>
               <li><a href='https://www.youtube.com/'>YouTube</a></li>
               <li><a href='https://www.instagram.com/'>Instagram</a></li>
               <li><a href='https://www.facebook.com/'>Facebook</a></li>
@@ -200,6 +200,61 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form> -->
       </nav>
+
+      <div id="youTubeVideos" class="vertical-menu">
+        <div>
+          <iframe width="400" height="230"
+          src="https://www.youtube.com/embed/n33W49x50HE"
+          title="Anna Wintour Answers Questions From Victoria Beckham, Camille Rowe and More | Go Ask Anna">
+          </iframe>
+        </div>
+        <div>
+          <iframe width="400" height="230"
+          src="https://www.youtube.com/embed/sAZCfDV0mEA"
+          title="MY CLOSET FAVORITES PART 2: WALLETS, CLOTHES, AND PERFUME | Heart Evangelista">
+          </iframe>
+        </div>
+        <div>
+          <iframe width="400" height="230"
+          src="https://www.youtube.com/embed/sR7QhrVwpvo"
+          title="Fingerprint-Protected Closet In Singapore | Bonkers Closets">
+          </iframe>
+        </div>
+        <div>
+          <iframe width="400" height="230"
+          src="https://www.youtube.com/embed/kVTVRuM_U40"
+          title="Jenna Lyons' Gorgeous Shoe Closet & Bathroom Tour | Allure">
+          </iframe>
+        </div>
+      </div>
+      <!-- <div class="container">
+          <div id="carouselYoutube" class="carousel vert slide" data-ride="carousel" data-interval="900">
+              <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <img class="d-block mx-auto img-fluid" src="//placehold.it/800x400" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                      <img class="d-block mx-auto img-fluid" src="//placehold.it/800x400/dd4444/fff" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                      <img class="d-block mx-auto img-fluid" src="//placehold.it/800x400/777" alt="Third slide">
+                  </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+              </a>
+          </div>
+      </div> -->
 
     </body>
 </html>
