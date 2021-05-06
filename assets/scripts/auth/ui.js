@@ -47,6 +47,7 @@ const onSignInSuccess = function (response) {
   $('#youTubeVideos').show()
   $('#backgroundMusic').stop()
   $('#backgroundMusic').trigger('pause')
+  $('#inspirationalMessage').show()
   setTimeout(function () {
     $('#message').fadeOut().empty()
   }, 3000)
@@ -105,6 +106,7 @@ const onSignOutSuccess = function () {
   $('#youTubeVideos').hide()
   $('#garmentAdd').hide()
   $('#garmentSearch').hide()
+  $('#inspirationalMessage').hide()
   $('#backgroundMusic').trigger('play')
   setTimeout(function () {
     $('#message').fadeOut().empty()

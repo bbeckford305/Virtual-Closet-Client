@@ -3,22 +3,21 @@
 const config = require('./../config')
 const store = require('./../store')
 
-const garmentAdd = function (garmentInfo) {
+const garmentAdd = function (garmentData) {
   return $.ajax({
     method: 'POST',
     url: config.apiUrl + '/garments',
-    data: garmentInfo,
     headers: {
       Authorization: 'Bearer ' + store.user.token
-    }
+    },
+    data: garmentData
   })
 }
 
-const garmentSearch = function (garmentInfo) {
+const garmentSearch = function (garmentData) {
   return $.ajax({
     method: 'GET',
     url: config.apiUrl + '/garments',
-    data: garmentInfo,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     }
@@ -26,13 +25,23 @@ const garmentSearch = function (garmentInfo) {
 }
 
 //
-const garmentUpdate = function (garmentInfo) {
+const garmentUpdate = function (garmentData) {
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + '/garments',
-    data: garmentInfo,
+    data: garmentData,
     headers: {
       Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
+const garmentTypeSearch = function (id) {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/garments/' + id,
+    headers: {
+      Authorization: `Bearer ${store.user.token}`
     }
   })
 }
@@ -49,7 +58,8 @@ const garmentUpdate = function (garmentInfo) {
 module.exports = {
   garmentAdd,
   garmentSearch,
-  garmentUpdate
+  garmentUpdate,
+  garmentTypeSearch
   // signIn,
   // changePassword,
   // signOut

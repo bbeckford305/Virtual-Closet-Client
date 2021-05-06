@@ -8,8 +8,8 @@ const ui = require('./ui')
 const onGarmentAdd = function (event) {
   event.preventDefault()
   const form = event.target
-  const garmentInfo = getFormFields(form)
-  api.garmentAdd(garmentInfo)
+  const garmentData = getFormFields(form)
+  api.garmentAdd(garmentData)
     .then(ui.onGarmentAddSuccess)
     .catch(ui.onGarmentAddFailure)
 }
@@ -17,8 +17,8 @@ const onGarmentAdd = function (event) {
 const onGarmentSearch = function (event) {
   event.preventDefault()
   const form = event.target
-  const garmentInfo = getFormFields(form)
-  api.garmentSearch(garmentInfo)
+  const garmentData = getFormFields(form)
+  api.garmentSearch(garmentData)
     .then(ui.onGarmentSearchSuccess)
     .catch(ui.onGarmentSearchFailure)
 }
@@ -27,10 +27,21 @@ const onGarmentSearch = function (event) {
 const onGarmentUpdate = function (event) {
   event.preventDefault()
   const form = event.target
-  const garmentInfo = getFormFields(form)
-  api.garmentUpdate(garmentInfo)
+  const garmentData = getFormFields(form)
+  api.garmentUpdate(garmentData)
     .then(ui.onGarmentUpdateSuccess)
     .catch(ui.onGarmentUpdateFailure)
+}
+
+const onGarmentTypeSearch = function (event) {
+  event.preventDefault()
+  const id = $(event.target).data('id')
+  const form = event.target
+  const garmentData = getFormFields(form)
+
+  api.garmentTypeSearch(garmentData, id)
+    .then(ui.onGarmentTypeSearchSuccess)
+    .catch(ui.onGarmentSearchFailure)
 }
 //
 // const onSignOut = function (event) {
@@ -45,7 +56,8 @@ const onGarmentUpdate = function (event) {
 module.exports = {
   onGarmentAdd,
   onGarmentSearch,
-  onGarmentUpdate
+  onGarmentUpdate,
+  onGarmentTypeSearch
   // onChangePassword,
   // onSignOut
 

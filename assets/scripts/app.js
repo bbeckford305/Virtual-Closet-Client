@@ -40,11 +40,14 @@ $(() => {
   $('#newUserButton').hide()
   $('#returnUserButton').hide()
   $('#menu').hide()
+  $('#inspirationalMessage').hide()
   $('#entryMessage').hide()
   $('#garmentAddForm').on('submit', garmentEvents.onGarmentAdd)
   $('#garmentSearchForm').on('submit', garmentEvents.onGarmentSearch)
   $('#garmentUpdateForm').on('submit', garmentEvents.onGarmentUpdate)
   $('#youTubeVideos').hide()
+  $('#garmentIDSearchForm').hide()
+  $('#garmentIDSearchForm').on('submit', garmentEvents.onGarmentTypeSearch)
 })
 
 // user clicks to start creating outfit
@@ -52,6 +55,8 @@ const onCreateOutfit = (event) => {
   $('#garmentSearch').show()
   $('#garmentSearchForm').show()
   $('#youTubeVideos').hide()
+  $('#inspirationalMessage').hide()
+  $('#change-password').hide()
 }
 $('#createOutfitButton').on('click', onCreateOutfit)
 
@@ -60,6 +65,9 @@ const onSearchGarment1 = (event) => {
   $('#garmentSearch').show()
   $('#garmentSearchForm').show()
   $('#youTubeVideos').hide()
+  $('#inspirationalMessage').hide()
+  $('#change-password').hide()
+  $('#garmentIDSearchForm').show()
 }
 $('#searchGarmentButton1').on('click', onSearchGarment1)
 
@@ -78,8 +86,10 @@ const onAddGarmentButton = (event) => {
   $('#searchGarmentButton1').hide()
   $('#createOutfitButton').hide()
   $('#garmentAddButton1').hide()
-  $('#garmentSearchForm').show()
+  $('#garmentSearchForm').hide()
   $('#youTubeVideos').hide()
+  $('#inspirationalMessage').hide()
+  $('#change-password').hide()
 }
 $('#garmentAddButton1').on('click', onAddGarmentButton)
 
@@ -115,6 +125,7 @@ const onChangePasswordRequest = (event) => {
   $('#passwordChangeForm').show()
   $('#change-password').show()
   $('#youTubeVideos').hide()
+  $('#inspirationalMessage').hide()
 }
 $('#changePasswordButton1').on('click', onChangePasswordRequest)
 

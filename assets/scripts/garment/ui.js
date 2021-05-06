@@ -5,8 +5,8 @@ const store = require('./../store')
 // on successfull  garment add
 const onGarmentAddSuccess = function (response) {
   $('#message').text('Garment Added')
+  // store.user.garment = response.garment
   $('#garmentAddForm').trigger('reset')
-  store.user.garment = response.garment
   // const garment = store.user.garment
 
   // $('#signinButton2').show()
@@ -24,9 +24,27 @@ const onGarmentAddFailure = function () {
 
 // on successfull  garment search
 const onGarmentSearchSuccess = function (response) {
-  store.user.garment = response.garment
+  // store.user.garment = response.garment
   $('#message').text('Your Requested Garment')
-  $('#sign-in').trigger('reset')
+  const garments = response.garment
+  let closetDisplay = ''
+  garments.forEach(garment => {
+    closetDisplay += `
+      <div id="userCloset">
+        <p>Type: ${garment.type}</p>
+        <p>Color: ${garment.color}</p>
+        <p>Cleaning Method: ${garment.cleaningMethod}</p>
+        <p>Cleaning Status: ${garment.cleaningStatus}<p>
+        <p>Worn Date: ${garment.wornDate}</p>
+        <p>Weather: ${garment.weather}</p>
+        <p>Garment ID: ${garment._id}</p>
+      </div>
+      `
+  })
+  $('#garmentView').html(closetDisplay)
+  $('#garmentSearchForm').trigger('reset')
+  $('#garmentView').show()
+
 //   // $('#change-password').show()
 //   // $('#sign-up').hide()
 //   // $('#sign-in').hide()
@@ -40,6 +58,28 @@ const onGarmentSearchSuccess = function (response) {
 //   // $('#newGameButton').show()
 //   // $('#gameLogo').show()
 //   // $('.userDropDown').show()
+}
+
+const onGarmentTypeSearchSuccess = function (response) {
+  // store.user.garment = response.garment
+  $('#message').text('Your Requested Garment')
+  const garments = response.garment
+  let closetDisplay = ''
+  garments.forEach(garment => {
+    closetDisplay += `
+      <div id="userCloset">
+        <p>Type: ${garment.type}</p>
+        <p>Color: ${garment.color}</p>
+        <p>Cleaning Method: ${garment.cleaningMethod}</p>
+        <p>Cleaning Status: ${garment.cleaningStatus}<p>
+        <p>Worn Date: ${garment.wornDate}</p>
+        <p>Weather: ${garment.weather}</p>
+      </div>
+      `
+  })
+  $('#garmentView').html(closetDisplay)
+  $('#garmentSearchForm').trigger('reset')
+  $('#garmentView').show()
 }
 //
 const onGarmentSearchFailure = function () {
@@ -87,7 +127,8 @@ module.exports = {
   onGarmentSearchSuccess,
   onGarmentSearchFailure,
   onGarmentUpdateSuccess,
-  onGarmentUpdateFailure
+  onGarmentUpdateFailure,
+  onGarmentTypeSearchSuccess
   // onSignInSuccess,
   // onSignInFailure,
   // onChangePasswordSuccess,

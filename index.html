@@ -21,12 +21,17 @@
       <!--Entry Message-->
       <h1 id="headerLogo">Virtual Closet</h1>
 
+      <!-- Inspirational Corner -->
+      <h2 id="inspirationalMessage">Inspirational Corner</h2>
       <!--Entry Button-->
       <button id="entryButton">Enter</button>
 
       <h2 id="entryMessage">Welcome To Your Virtual Closet</h2>
 
       <h2 id="userMessage">User Closet</h2>
+
+      <main class="container col-md-8">
+
 
       <!--New User Button-->
       <button id="newUserButton">New User</button>
@@ -48,7 +53,7 @@
                 <input id="inputLastName" name="credentials[lastName]" type="text" required>
               </div>
             </div>
-              <div class="form-group col-8">
+              <div class="form-group col-md-8">
                 <label id="emailWord" for="inputEmail">Email</label>
                 <input id="inputEmail" name="credentials[email]" type="email" required>
               </div>
@@ -70,7 +75,7 @@
 
       <!-- Sign In Button-->
 
-      <form id="sign-in">
+      <form id="sign-in" >
         <p id="signinForm">Login</p>
         <div class="signinform1 row">
           <div class="form-group col-md-6">
@@ -86,12 +91,20 @@
       </form>
 
       <!--Change Password Button-->
-      <p id="passwordChangeForm">Change Your Password</p>
-      <form id="change-password">
-        <input name="passwords[old]" type="password" placeholder="Current Password" required>
-        <input name="passwords[new]" type="password" placeholder="New Password" required>
-        <input type="submit" value="Change Password"/>
-      </form>
+        <form id="change-password">
+          <p id="passwordChangeForm">Change Your Password</p>
+          <div class="changePasswordform1 row">
+            <div class="form-group col-md-6">
+              <label for="oldpasswordChange2">Old Password</label>
+            <input id="oldPassword" name="passwords[old]" type="password" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="newPasswordChange2">New Password</label>
+            <input id="newPassword" name="passwords[new]" type="password"  required>
+            </div>
+          </div>
+          <input id="changePWButton" type="submit" value="Change Password"/>
+        </form>
 
       <!--Sign out Button-->
       <!-- <button id="signoutButton">Sign Out</button> -->
@@ -121,37 +134,67 @@
       <button id="addImageButton">Add Image</button>
 
       <!--Garment Add-->
-      <p id="garmentAdd">Add Your Garment</p>
       <form id="garmentAddForm">
-        <input name="garment[type]" type="text" placeholder="Garment Type" required>
-        <input name="garment[color]" type="text" placeholder="Garment Color" required>
-        <input name="garment[cleaningMethod]" type="text" placeholder="Cleaning Method" required>
-        <input name="garment[cleaningStatus]" type="text" placeholder="Clean Status" required>
-        <input name="garment[wornDate]" type="text" placeholder="Worn Date" required>
-        <input name="garment[weather]" type="text" placeholder="Weather" required>
-        <input type="submit" value="Add Garment"/>
+        <p id="garmentAdd">Add Your Garment</p>
+        <div class="garmentAddForm1 row">
+          <div class="form-group col-md-6 ">
+            <label for="garmentType">Garment Type</label>
+            <input id="garmentType1" name="garment[type]" type="text" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="garmentColor">Garment Color</label>
+            <input id="garmentColor1" name="garment[color]" type="text" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="cleaningMethod">Cleaning Method</label>
+            <input id="cleaningMethod1" name="garment[cleaningMethod]" type="text"required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="cleaningStatus">Clean Status</label>
+            <input id="cleaningStatus1" name="garment[cleaningStatus]" type="text" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="wornDate">Worn Date</label>
+            <input id="wornDate1" name="garment[wornDate]" type="date" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="weather">Weather Type</label>
+            <input id="weather1" name="garment[weather]" type="text"required>
+          </div>
+        </div>
+          <input id="garmentAddButton2" type="submit" value="Add Garment"/>
       </form>
 
       <!--Garment Search-->
       <p id="garmentSearch">Search For Garment</p>
       <form id="garmentSearchForm">
-        <input name="garment[id]" type="text" placeholder="Garment ID" required>
-        <input name="garment[type]" type="text" placeholder="Garment Type" required>
-        <input name="garment[color]" type="text" placeholder="Garment Color" required>
-        <input name="garment[weather]" type="text" placeholder="Weather" required>
+        <!-- <input name="garment[id]" type="text" placeholder="Garment ID" > -->
+        <input name="garment[type]" type="text" placeholder="Garment Type" >
+        <input name="garment[color]" type="text" placeholder="Garment Color" >
+        <input name="garment[weather]" type="text" placeholder="Weather">
+        <input type="submit" value="Garment Search"/>
+      </form>
+
+      <!--Garment Search by ID-->
+      <form id="garmentIDSearchForm">
+        <p id="garmentIDSearch">Search For Garment</p>
+        <input name="garment[id]" type="text" placeholder="Garment ID" >
         <input type="submit" value="Garment Search"/>
       </form>
 
       <!--Garment Update-->
       <p id="garmentUpdate">Update Garment</p>
       <form id="garmentUpdateForm">
-        <input name="garment[cleaningStatus]" type="text" placeholder="Clean Status" required>
-        <input name="garment[wornDate]" type="text" placeholder="Worn Date" required>
+        <input name="garment[cleaningStatus]" type="text" placeholder="Clean Status">
+        <input name="garment[wornDate]" type="text" placeholder="Worn Date">
         <input type="submit" value="Update Garment"/>
       </form>
 
-      <div id="garmentImage">
-        <img src="public/Images/thumbnail.jpg" alt="" />
+      <!-- Display Garment -->
+      <div id="garmentView">
+        <div id="garmentImage">
+          <img src="public/Images/thumbnail.jpg" alt="" />
+        </div>
       </div>
 
       <!-- <div class="flex-container">
@@ -255,6 +298,6 @@
               </a>
           </div>
       </div> -->
-
+    </main>
     </body>
 </html>

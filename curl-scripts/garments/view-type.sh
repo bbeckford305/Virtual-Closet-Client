@@ -5,10 +5,10 @@ curl "${API}${URL_PATH}" \
   --request GET \
   --header "Content-Type: application/json" \
   --header "Authorization: Bearer ${TOKEN}" \
-  --data '{
-      "garment": {
-        "type": "'"${TYPE}"'"
-      }
-    }'
+  # --data '{
+  #     "garment": {
+  #       "type": "'"${TYPE}"'"
+  #     }
+  #   }'
 
 echo
