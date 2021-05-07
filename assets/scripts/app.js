@@ -42,12 +42,14 @@ $(() => {
   $('#menu').hide()
   $('#inspirationalMessage').hide()
   $('#entryMessage').hide()
+  $('#pullAllGarments').hide()
   $('#garmentAddForm').on('submit', garmentEvents.onGarmentAdd)
-  $('#garmentSearchForm').on('submit', garmentEvents.onGarmentSearch)
+  $('#pullAllGarments').on('click', garmentEvents.onGarmentSearch)
+  // $('#garmentSearchForm').on('submit', garmentEvents.onGarmentSearch)
   $('#garmentUpdateForm').on('submit', garmentEvents.onGarmentUpdate)
   $('#youTubeVideos').hide()
   $('#garmentIDSearchForm').hide()
-  $('#garmentIDSearchForm').on('submit', garmentEvents.onGarmentTypeSearch)
+  $('#garmentIDSearchForm').on('submit', garmentEvents.onGarmentIDSearch)
 })
 
 // user clicks to start creating outfit
@@ -68,6 +70,7 @@ const onSearchGarment1 = (event) => {
   $('#inspirationalMessage').hide()
   $('#change-password').hide()
   $('#garmentIDSearchForm').show()
+  $('#pullAllGarments').show()
 }
 $('#searchGarmentButton1').on('click', onSearchGarment1)
 

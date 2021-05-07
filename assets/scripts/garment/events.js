@@ -18,6 +18,9 @@ const onGarmentSearch = function (event) {
   event.preventDefault()
   const form = event.target
   const garmentData = getFormFields(form)
+  // const type = $(event.target).text()
+  // const color = $(event.target).text()
+  // const weather = $(event.target).text()
   api.garmentSearch(garmentData)
     .then(ui.onGarmentSearchSuccess)
     .catch(ui.onGarmentSearchFailure)
@@ -33,14 +36,13 @@ const onGarmentUpdate = function (event) {
     .catch(ui.onGarmentUpdateFailure)
 }
 
-const onGarmentTypeSearch = function (event) {
+const onGarmentIDSearch = function (event) {
   event.preventDefault()
-  const id = $(event.target).data('id')
   const form = event.target
   const garmentData = getFormFields(form)
 
-  api.garmentTypeSearch(garmentData, id)
-    .then(ui.onGarmentTypeSearchSuccess)
+  api.garmentIDSearch(garmentData.garment.id)
+    .then(ui.onGarmentIDSearchSuccess)
     .catch(ui.onGarmentSearchFailure)
 }
 //
@@ -57,7 +59,7 @@ module.exports = {
   onGarmentAdd,
   onGarmentSearch,
   onGarmentUpdate,
-  onGarmentTypeSearch
+  onGarmentIDSearch
   // onChangePassword,
   // onSignOut
 

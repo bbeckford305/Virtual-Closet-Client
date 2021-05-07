@@ -20,7 +20,8 @@ const garmentSearch = function (garmentData) {
     url: config.apiUrl + '/garments',
     headers: {
       Authorization: 'Bearer ' + store.user.token
-    }
+    },
+    data: garmentData
   })
 }
 
@@ -36,12 +37,12 @@ const garmentUpdate = function (garmentData) {
   })
 }
 
-const garmentTypeSearch = function (id) {
+const garmentIDSearch = function (id) {
   return $.ajax({
     method: 'GET',
     url: config.apiUrl + '/garments/' + id,
     headers: {
-      Authorization: `Bearer ${store.user.token}`
+      Authorization: 'Bearer ' + store.user.token
     }
   })
 }
@@ -59,7 +60,7 @@ module.exports = {
   garmentAdd,
   garmentSearch,
   garmentUpdate,
-  garmentTypeSearch
+  garmentIDSearch
   // signIn,
   // changePassword,
   // signOut

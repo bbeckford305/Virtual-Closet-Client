@@ -5,7 +5,7 @@ const store = require('./../store')
 // on successfull  garment add
 const onGarmentAddSuccess = function (response) {
   $('#message').text('Garment Added')
-  // store.user.garment = response.garment
+  store.user.garment = response.garment
   $('#garmentAddForm').trigger('reset')
   // const garment = store.user.garment
 
@@ -24,13 +24,14 @@ const onGarmentAddFailure = function () {
 
 // on successfull  garment search
 const onGarmentSearchSuccess = function (response) {
+  // console.log(response)
   // store.user.garment = response.garment
   $('#message').text('Your Requested Garment')
-  const garments = response.garment
-  let closetDisplay = ''
+  const garments = response.garments
+  $('#garmentView').html('')
   garments.forEach(garment => {
-    closetDisplay += `
-      <div id="userCloset">
+    $('#garmentView').append(
+      `<div id="userCloset">
         <p>Type: ${garment.type}</p>
         <p>Color: ${garment.color}</p>
         <p>Cleaning Method: ${garment.cleaningMethod}</p>
@@ -38,10 +39,8 @@ const onGarmentSearchSuccess = function (response) {
         <p>Worn Date: ${garment.wornDate}</p>
         <p>Weather: ${garment.weather}</p>
         <p>Garment ID: ${garment._id}</p>
-      </div>
-      `
+      </div>`)
   })
-  $('#garmentView').html(closetDisplay)
   $('#garmentSearchForm').trigger('reset')
   $('#garmentView').show()
 
@@ -60,24 +59,23 @@ const onGarmentSearchSuccess = function (response) {
 //   // $('.userDropDown').show()
 }
 
-const onGarmentTypeSearchSuccess = function (response) {
+const onGarmentIDSearchSuccess = function (response, garment) {
   // store.user.garment = response.garment
   $('#message').text('Your Requested Garment')
-  const garments = response.garment
-  let closetDisplay = ''
+  const garments = garment._id
+  $('#garmentView').html('')
   garments.forEach(garment => {
-    closetDisplay += `
-      <div id="userCloset">
+    $('#garmentView').append(
+      `<div id="userCloset">
         <p>Type: ${garment.type}</p>
         <p>Color: ${garment.color}</p>
         <p>Cleaning Method: ${garment.cleaningMethod}</p>
         <p>Cleaning Status: ${garment.cleaningStatus}<p>
         <p>Worn Date: ${garment.wornDate}</p>
         <p>Weather: ${garment.weather}</p>
-      </div>
-      `
+        <p>Garment ID: ${garment._id}</p>
+      </div>`)
   })
-  $('#garmentView').html(closetDisplay)
   $('#garmentSearchForm').trigger('reset')
   $('#garmentView').show()
 }
@@ -128,7 +126,7 @@ module.exports = {
   onGarmentSearchFailure,
   onGarmentUpdateSuccess,
   onGarmentUpdateFailure,
-  onGarmentTypeSearchSuccess
+  onGarmentIDSearchSuccess
   // onSignInSuccess,
   // onSignInFailure,
   // onChangePasswordSuccess,
