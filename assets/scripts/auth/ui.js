@@ -115,6 +115,7 @@ const onSignOutSuccess = function () {
   $('#garmentPullAll').hide()
   $('#garmentIDSearchForm').hide()
   $('#instagramPost').hide()
+  $('#garmentView').hide()
   setTimeout(function () {
     $('#message').fadeOut().empty()
   }, 3000)

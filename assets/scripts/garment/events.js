@@ -31,16 +31,17 @@ const onGarmentUpdate = function (event) {
   event.preventDefault()
   const form = event.target
   const garmentData = getFormFields(form)
-  api.garmentUpdate(garmentData)
+  const id = garmentData.garment.id
+    .api.garmentUpdate(garmentData, id)
     .then(ui.onGarmentUpdateSuccess)
     .catch(ui.onGarmentUpdateFailure)
 }
 
-const onGarmentIDSearch = function (event) {
+const onGarmentIDSearch = function (event, garmentNumber) {
   event.preventDefault()
   const form = event.target
   const garmentData = getFormFields(form)
-
+  // const garmentNumber = response.garment.id
   api.garmentIDSearch(garmentData.garment.id)
     .then(ui.onGarmentIDSearchSuccess)
     .catch(ui.onGarmentSearchFailure)

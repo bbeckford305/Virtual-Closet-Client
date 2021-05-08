@@ -26,10 +26,10 @@ const garmentSearch = function (garmentData) {
 }
 
 //
-const garmentUpdate = function (garmentData) {
+const garmentUpdate = function (garmentData, id) {
   return $.ajax({
     method: 'PATCH',
-    url: config.apiUrl + '/garments',
+    url: config.apiUrl + '/garments/' + id,
     data: garmentData,
     headers: {
       Authorization: 'Bearer ' + store.user.token

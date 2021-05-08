@@ -41,6 +41,7 @@ const onGarmentSearchSuccess = function (response) {
         <p>Garment ID: ${garment._id}</p>
       </div>`)
   })
+  $('#updateGarmentButton').show()
   $('#garmentSearchForm').trigger('reset')
   $('#garmentView').show()
 
@@ -58,9 +59,10 @@ const onGarmentSearchSuccess = function (response) {
 //   // $('#gameLogo').show()
 //   // $('.userDropDown').show()
 }
-
+// alert($('#message').text())
 const onGarmentIDSearchSuccess = function (response) {
-  // store.user.garment = response.garment
+  store.user.garment = response.garment
+  $('#updateGarmentButton').show()
   $('#message').text('Your Requested Garment')
   const garment = response.garment
   $('#garmentView').html('')
@@ -74,27 +76,52 @@ const onGarmentIDSearchSuccess = function (response) {
         <p>Worn Date: ${garment.wornDate}</p>
         <p>Weather: ${garment.weather}</p>
         <p>Garment ID: ${garment._id}</p>
+
       </div>`)
-  // })
+  $('#updateGarmentButton').show()
+  $('#updateGarmentButton').html(${garment._id})
   $('#garmentSearchForm').trigger('reset')
   $('#garmentView').show()
 }
-//
+
+// <script></script>
+// <script>
+//   $(function(){
+//     $("garmentImageUpload").change(function(event) {
+//       var x= URL.createObjectURL(event.target.files[0]);
+//       $("#uploadImage").attr("src",x);
+//       console.log(event);
+//     });
+//   })
+// </script>
+
 const onGarmentSearchFailure = function () {
   $('#message').text('Garment Not Found')
   $('#sign-in').trigger('reset')
 }
 //
 const onGarmentUpdateSuccess = function (response) {
+  // document.getElementById(`${store.garment.id}`)
   store.user.garment = response.garment
+  const garment = response.garment
+  $('#garmentView').html('')
   $('#message').text('Garment Has Been Updated')
   $('#change-password').trigger('reset')
+  $('#garmentView').append(
+    `<div id="userCloset">
+    <p>Cleaning Status: ${garment.cleaningStatus}<p>
+    <p>Worn Date: ${garment.wornDate}</p>
+    <p>Garment ID: ${garment._id}</p>
+  </div>`)
+  $('#garmentSearchForm').trigger('reset')
+  $('#garmentView').show()
 }
 //
 const onGarmentUpdateFailure = function () {
   $('#message').text('Garment Update Failed')
   $('#change-password').trigger('reset')
 }
+
 //
 // const onSignOutSuccess = function () {
 //   store.user = null

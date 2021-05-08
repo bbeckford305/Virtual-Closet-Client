@@ -122,8 +122,6 @@
       <!--Delete Garment-->
       <button id="deleteGarmentButton">Delete Garment</button>
 
-      <!--Update Garment-->
-      <button id="updateGarmentButton">Update Garment</button>
 
       <!--Search Again-->
       <button id="restartOutfitButton">Restart Outfit</button>
@@ -161,6 +159,8 @@
           </div>
         </div>
           <input id="garmentAddButton2" type="submit" value="Add Garment"/>
+          <label class="form-label" for="customFile">Upload Garment Image</label>
+          <input id="imageUpload" type="file" accept="image/gif, image/jpeg, image/png" name="image" class="form-control" style="display: none;" />
       </form>
 
       <!-- Pull all Garments -->
@@ -198,11 +198,18 @@
 
       <!-- Display Garment -->
       <div id="garmentView">
-        <div id="garmentImage">
-          <img src="public/Images/thumbnail.jpg" alt="" />
-        </div>
-      </div>
 
+        <!-- <button id="updateGarmentButton">Update Garment</button> -->
+        <!-- <div class="garmentImageView">
+          <div id="garmentImage">
+            <img src="garment/images.png" id="uploadImage" >
+          </div>
+          <div class="custom-file">
+            <label for="garmentImageUpload">Upload Garment Image</label>
+            <input type="file" id="uploadedImage" >
+          </div>
+        </div> -->
+      </div>
 
       <!-- <div class="flex-container">
          <div class="flex-items"></div>
@@ -344,6 +351,10 @@
               </a>
           </div>
       </div> -->
+
+      <!-- Update Garment-->
+      <button id="updateGarmentButton">Update Garment</button>
+
     </main>
     </body>
 </html>

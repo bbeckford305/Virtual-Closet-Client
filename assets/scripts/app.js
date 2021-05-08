@@ -69,6 +69,7 @@ const onCreateOutfit = (event) => {
   $('#pullAllGarments').show()
   $('#garmentIDPull').show()
   $('#instagramPost').hide()
+  $('#garmentView').hide()
 }
 $('#createOutfitButton').on('click', onCreateOutfit)
 
@@ -86,6 +87,7 @@ const onSearchGarment1 = (event) => {
   $('#garmentAddForm').hide()
   $('#garmentIDPull').show()
   $('#instagramPost').hide()
+  $('#garmentView').hide()
 }
 $('#searchGarmentButton1').on('click', onSearchGarment1)
 
@@ -108,6 +110,7 @@ const onAddGarmentButton = (event) => {
   $('#garmentPullAll').hide()
   $('#garmentIDPull').hide()
   $('#instagramPost').hide()
+  $('#garmentView').hide()
 }
 $('#garmentAddButton1').on('click', onAddGarmentButton)
 
@@ -178,6 +181,7 @@ const onChangePasswordRequest = (event) => {
   $('#garmentIDPull').hide()
   $('#garmentSearchForm').hide()
   $('#instagramPost').hide()
+  $('#garmentView').hide()
 }
 $('#changePasswordButton1').on('click', onChangePasswordRequest)
 
@@ -192,3 +196,13 @@ $('#changePasswordButton1').on('click', onChangePasswordRequest)
 //     document.getElementById('menu').style.borderRadius = '43px'
 //   }
 // }
+
+// <script>
+//   $(function(){
+//     $("garmentImageUpload").change(function(event) {
+//       var x= URL.createObjectURL(event.target.files[0]);
+//       $("#uploadImage").attr("src",x);
+//       console.log(event);
+//     });
+//   })
+// </script>
