@@ -28,7 +28,7 @@
 
       <h2 id="entryMessage">Welcome To Your Virtual Closet</h2>
 
-      <h2 id="userMessage">User Closet</h2>
+      <!-- <h2 id="userMessage">User Closet</h2> -->
 
       <main class="container col-md-8">
 
@@ -39,6 +39,11 @@
 
       <p id="message"></p>
       <!--Sign Up Button-->
+
+      <!--Returning To Sign-Up Button-->
+      <div id="returnSignupSection">
+        <p id="returntoSignup">New User <button id="returntoSignupButton">Sign Up</button></p>
+      </div>
 
 
           <form id="sign-up">
@@ -73,6 +78,11 @@
       <!--Returning User Button-->
       <button id="returnUserButton">Returning User</button>
 
+      <!--Returning To Sign-In Button-->
+      <div id="returnUserSection">
+        <p id="returntoSignin">Returning User <button id="returntoSigninButton">Sign In</button></p>
+      </div>
+
       <!-- Sign In Button-->
 
       <form id="sign-in" >
@@ -106,26 +116,14 @@
           <input id="changePWButton" type="submit" value="Change Password"/>
         </form>
 
-      <!--Sign out Button-->
-      <!-- <button id="signoutButton">Sign Out</button> -->
-
-      <!--Create Outfit-->
-      <!-- <button id="createOutfitButton">Create Outfit</button> -->
-
       <!--Add to Outfit-->
       <button id="addToOutfitButton">Add To Outfit</button>
-
-      <!--Add A Garment-->
-      <!-- <button id="garmentAddButton1">Add Garment</button> -->
 
       <!--Delete Garment-->
       <button id="deleteGarmentButton">Delete Garment</button>
 
       <!--Update Garment-->
       <button id="updateGarmentButton">Update Garment</button>
-
-      <!--Garment Search Button 1-->
-      <!-- <button id="searchGarmentButton1">Search For Garment</button> -->
 
       <!--Search Again-->
       <button id="restartOutfitButton">Restart Outfit</button>
@@ -166,7 +164,11 @@
       </form>
 
       <!-- Pull all Garments -->
-      <button id="pullAllGarments">Pull All</button>
+      <div id="garmentPullAll">
+        <p id="pullAllGarmentHeader">View Entire Collection</p>
+        <button id="pullAllGarments">Pull All</button>
+      </div>
+
       <!--Garment Search-->
       <form id="garmentSearchForm">
         <p id="garmentSearch">Search For Garment</p>
@@ -178,11 +180,13 @@
       </form>
 
       <!--Garment Search by ID-->
-      <form id="garmentIDSearchForm">
-        <p id="garmentIDSearch">Search For Garment</p>
-        <input name="garment[id]" type="text" placeholder="Garment ID" >
-        <input type="submit" value="Garment Search"/>
-      </form>
+      <div id="garmentIDPull">
+        <form id="garmentIDSearchForm">
+          <p id="garmentIDSearch">Search By Garment ID</p>
+          <input name="garment[id]" type="text" placeholder="Garment ID" >
+          <input type="submit" value="Garment Search"/>
+        </form>
+      </div>
 
       <!--Garment Update-->
       <p id="garmentUpdate">Update Garment</p>
@@ -198,6 +202,7 @@
           <img src="public/Images/thumbnail.jpg" alt="" />
         </div>
       </div>
+
 
       <!-- <div class="flex-container">
          <div class="flex-items"></div>
@@ -272,6 +277,45 @@
           </iframe>
         </div>
       </div>
+
+      <div id="instagramPost" class="row">
+        <div id="instagramVideo1" class="column">
+          <div>
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CK9X7-4gs6T/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13">
+              <script async src="//www.instagram.com/embed.js"></script>
+            </blockquote>
+          </div>
+          <div>
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CObNPjctm8I/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13">
+              <script async src="//www.instagram.com/embed.js"></script>
+            </blockquote>
+          </div>
+        </div>
+        <div id="instagramVideo2" class="column">
+          <div>
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/CL2BDXmHbjm/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13">
+              <script async src="//www.instagram.com/embed.js"></script>
+            </blockquote>
+          </div>
+          <div>
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/CLuJMPNIeXe/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13">
+              <script async src="//www.instagram.com/embed.js"></script>
+            </blockquote>
+          </div>
+        </div>
+        <div id="instagramVideo3" class="column">
+          <div>
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CL4nJC0pNfO/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13">
+              <script async src="//www.instagram.com/embed.js"></script>
+            </blockquote>
+          </div>
+          <div>
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CM1Rhw4L926/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13">
+              <script async src="//www.instagram.com/embed.js"></script>
+            </blockquote>
+          </div>
+      </div>
+    </div>
       <!-- <div class="container">
           <div id="carouselYoutube" class="carousel vert slide" data-ride="carousel" data-interval="900">
               <ol class="carousel-indicators">

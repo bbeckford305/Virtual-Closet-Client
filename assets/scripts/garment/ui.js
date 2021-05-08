@@ -59,13 +59,13 @@ const onGarmentSearchSuccess = function (response) {
 //   // $('.userDropDown').show()
 }
 
-const onGarmentIDSearchSuccess = function (response, garment) {
+const onGarmentIDSearchSuccess = function (response) {
   // store.user.garment = response.garment
   $('#message').text('Your Requested Garment')
-  const garments = garment._id
+  const garment = response.garment
   $('#garmentView').html('')
-  garments.forEach(garment => {
-    $('#garmentView').append(
+  // garments.forEach(garment => {
+  $('#garmentView').append(
       `<div id="userCloset">
         <p>Type: ${garment.type}</p>
         <p>Color: ${garment.color}</p>
@@ -75,7 +75,7 @@ const onGarmentIDSearchSuccess = function (response, garment) {
         <p>Weather: ${garment.weather}</p>
         <p>Garment ID: ${garment._id}</p>
       </div>`)
-  })
+  // })
   $('#garmentSearchForm').trigger('reset')
   $('#garmentView').show()
 }

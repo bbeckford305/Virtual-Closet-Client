@@ -8,6 +8,7 @@ const onSignUpSuccess = function () {
   $('#signupForm').hide()
   $('#sign-up').hide()
   $('#sign-in').show()
+  $('#returnUserSection').hide()
 
   setTimeout(function () {
     $('#message').fadeOut().empty()
@@ -48,6 +49,9 @@ const onSignInSuccess = function (response) {
   $('#backgroundMusic').stop()
   $('#backgroundMusic').trigger('pause')
   $('#inspirationalMessage').show()
+  $('#garmentIDPull').hide()
+  $('#instagramPost').show()
+  $('#returnSignupSection').hide()
   setTimeout(function () {
     $('#message').fadeOut().empty()
   }, 3000)
@@ -108,6 +112,9 @@ const onSignOutSuccess = function () {
   $('#garmentSearch').hide()
   $('#inspirationalMessage').hide()
   $('#backgroundMusic').trigger('play')
+  $('#garmentPullAll').hide()
+  $('#garmentIDSearchForm').hide()
+  $('#instagramPost').hide()
   setTimeout(function () {
     $('#message').fadeOut().empty()
   }, 3000)

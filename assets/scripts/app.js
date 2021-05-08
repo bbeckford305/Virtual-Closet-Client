@@ -40,15 +40,20 @@ $(() => {
   $('#newUserButton').hide()
   $('#returnUserButton').hide()
   $('#menu').hide()
+  $('#garmentPullAll').hide()
+  $('#garmentIDPull').hide()
   $('#inspirationalMessage').hide()
   $('#entryMessage').hide()
   $('#pullAllGarments').hide()
+  $('#garmentViewAll').hide()
   $('#garmentAddForm').on('submit', garmentEvents.onGarmentAdd)
   $('#pullAllGarments').on('click', garmentEvents.onGarmentSearch)
-  // $('#garmentSearchForm').on('submit', garmentEvents.onGarmentSearch)
   $('#garmentUpdateForm').on('submit', garmentEvents.onGarmentUpdate)
   $('#youTubeVideos').hide()
   $('#garmentIDSearchForm').hide()
+  $('#instagramPost').hide()
+  $('#returnUserSection').hide()
+  $('#returnSignupSection').hide()
   $('#garmentIDSearchForm').on('submit', garmentEvents.onGarmentIDSearch)
 })
 
@@ -59,6 +64,11 @@ const onCreateOutfit = (event) => {
   $('#youTubeVideos').hide()
   $('#inspirationalMessage').hide()
   $('#change-password').hide()
+  $('#garmentPullAll').show()
+  $('#garmentIDSearchForm').show()
+  $('#pullAllGarments').show()
+  $('#garmentIDPull').show()
+  $('#instagramPost').hide()
 }
 $('#createOutfitButton').on('click', onCreateOutfit)
 
@@ -71,6 +81,11 @@ const onSearchGarment1 = (event) => {
   $('#change-password').hide()
   $('#garmentIDSearchForm').show()
   $('#pullAllGarments').show()
+  $('#garmentPullAll').show()
+  $('#garmentAdd').hide()
+  $('#garmentAddForm').hide()
+  $('#garmentIDPull').show()
+  $('#instagramPost').hide()
 }
 $('#searchGarmentButton1').on('click', onSearchGarment1)
 
@@ -86,13 +101,13 @@ $('#entryButton').on('click', onEnterCloset)
 const onAddGarmentButton = (event) => {
   $('#garmentAdd').show()
   $('#garmentAddForm').show()
-  $('#searchGarmentButton1').hide()
-  $('#createOutfitButton').hide()
-  $('#garmentAddButton1').hide()
   $('#garmentSearchForm').hide()
   $('#youTubeVideos').hide()
   $('#inspirationalMessage').hide()
   $('#change-password').hide()
+  $('#garmentPullAll').hide()
+  $('#garmentIDPull').hide()
+  $('#instagramPost').hide()
 }
 $('#garmentAddButton1').on('click', onAddGarmentButton)
 
@@ -102,8 +117,35 @@ const onNewUser = (event) => {
   $('#sign-up').show()
   $('#newUserButton').hide()
   $('#returnUserButton').hide()
+  $('#returnUserSection').show()
 }
 $('#newUserButton').on('click', onNewUser)
+
+// Return User Section during Signup
+const onReturnUserSection = (event) => {
+  $('#signinForm').show()
+  $('#sign-in').show()
+  $('#signupForm').hide()
+  $('#sign-up').hide()
+  $('#newUserButton').hide()
+  $('#returnUserButton').hide()
+  $('#returnUserSection').hide()
+  $('#returnSignupSection').show()
+}
+$('#returntoSigninButton').on('click', onReturnUserSection)
+
+// Signup User Section during Login
+const onreturnSignupSection = (event) => {
+  $('#signupForm').show()
+  $('#sign-up').show()
+  $('#newUserButton').hide()
+  $('#returnUserButton').hide()
+  $('#returnUserSection').show()
+  $('#returnSignupSection').hide()
+  $('#signinForm').hide()
+  $('#sign-in').hide()
+}
+$('#returntoSignupButton').on('click', onreturnSignupSection)
 
 // user new user clicks
 const onReturnUser = (event) => {
@@ -113,6 +155,7 @@ const onReturnUser = (event) => {
   $('#sign-up').hide()
   $('#newUserButton').hide()
   $('#returnUserButton').hide()
+  $('#returnSignupSection').show()
 }
 $('#returnUserButton').on('click', onReturnUser)
 
@@ -129,6 +172,12 @@ const onChangePasswordRequest = (event) => {
   $('#change-password').show()
   $('#youTubeVideos').hide()
   $('#inspirationalMessage').hide()
+  $('#garmentPullAll').hide()
+  $('#garmentAdd').hide()
+  $('#garmentAddForm').hide()
+  $('#garmentIDPull').hide()
+  $('#garmentSearchForm').hide()
+  $('#instagramPost').hide()
 }
 $('#changePasswordButton1').on('click', onChangePasswordRequest)
 

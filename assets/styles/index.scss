@@ -71,6 +71,7 @@ h1{
   height: auto;
   line-height: 230px;
   text-align: center;
+  position: fixed;
 }
 
 #message {
@@ -107,6 +108,13 @@ h1{
   height: auto;
   right: 20.5%;
   top: 47%
+}
+
+#garmentView {
+  background-color:  $pinktransparent;
+  font-family: $ovo;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 #returnUserButton{
@@ -223,13 +231,15 @@ h1{
 #sign-in {
   background: $pinktransparent;
   padding: 4px;
-  border: 3px solid $mediumGray;
+  // border: 3px solid $mediumGray;
   border-radius: 5px;
+  width: 514px;
+  height: 164px;
   // width: 30%;
   // // height: 30%;
   // margin: auto;
   // display: flex;
-  // justify-content: center;
+  // // justify-content: center;
   // align-content: center;
 
 }
@@ -290,9 +300,95 @@ h1{
   background-color: $roseGold;
   font-weight: bold;
   right: 0;
+  display: flex;
   align-items: flex-end;
 
   }
+
+  #instagramPost {
+    // display: flex;
+    // justify-content: space-evenly;
+    position:fixed;
+    // bottom: 0;
+    // top: 5;
+    // left: 50px;
+    z-index: 1;
+    margin-right: 0px;
+    margin-left: 300px;
+    // background-color: $pinktransparent;
+  }
+
+  #instagramVideo1 {
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+    border-left: 10px;
+  }
+
+  #instagramVideo2 {
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+    border-left: 10px;
+  }
+
+  #instagramVideo3 {
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+    border-left: 10px;
+  }
+
+  #returntoSignupButton {
+    font-family: $ovo;
+    color: $roseGold;
+    background-color:transparent;
+    font-weight: bold;
+    right: 0;
+    align-items: center;
+    font-size: 15px;
+    padding: 0;
+    border: none;
+
+    }
+
+  #returntoSignup {
+    font-family: $paris;
+    font-weight: bold;
+    right: 0;
+    align-items: center;
+    padding: 0;
+    border: none;
+    font-size: 20px;
+
+    }
+
+    #returntoSigninButton {
+      font-family: $ovo;
+      color: $roseGold;
+      background-color:transparent;
+      font-weight: bold;
+      right: 0;
+      align-items: center;
+      font-size: 15px;
+      padding: 0;
+      border: none;
+
+      }
+
+    #returnUserSection {
+      font-family: $paris;
+      font-weight: bold;
+      right: 0;
+      align-items: center;
+      padding: 0;
+      border: none;
+      font-size: 20px;
+
+      }
 
   #loginButton {
     color: $black;
@@ -327,11 +423,15 @@ h1{
         flex-wrap: wrap;
         max-width: 700px;
         margin: 0 auto;
+        text-transform: uppercase;
       }
-  // #createOutfitButton {
-  //   padding: 0;
-  //   border: none;
-  // }
+  #userCloset {
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    border: 5px;
+  }
 
 .flex-container {
   display: flex;
