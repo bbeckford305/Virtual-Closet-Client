@@ -23,7 +23,7 @@ $(() => {
   $('#change-password').hide()
   $('#createOutfitButton').hide()
   $('#addToOutfitButton').hide()
-  $('#deleteGarmentButton').hide()
+  $('#garmentDeleteForm').hide()
   $('#updateGarmentButton').hide()
   $('#searchGarmentButton1').hide()
   $('#restartOutfitButton').hide()
@@ -40,6 +40,8 @@ $(() => {
   $('#newUserButton').hide()
   $('#returnUserButton').hide()
   $('#menu').hide()
+  $('#garmentDelete1').hide()
+  $('#deleteGarmentButton2').hide()
   $('#garmentPullAll').hide()
   $('#garmentIDPull').hide()
   $('#inspirationalMessage').hide()
@@ -55,6 +57,7 @@ $(() => {
   $('#returnUserSection').hide()
   $('#returnSignupSection').hide()
   $('#garmentIDSearchForm').on('submit', garmentEvents.onGarmentIDSearch)
+  $('#garmentDeleteForm').on('submit', garmentEvents.onGarmentDelete)
 })
 
 // user clicks to start creating outfit
@@ -168,6 +171,15 @@ const onUpdateGarmentButton = (event) => {
   $('#garmentUpdateForm').show()
 }
 $('#updateGarmentButton').on('click', onUpdateGarmentButton)
+
+// user update garment
+const ondeleteGarmentButton = (event) => {
+  $('#garmentDelete1').show()
+  $('#garmentDeleteForm').show()
+  $('#deleteGarmentButton2').hide()
+  $('#deleteGarmentButton').show()
+}
+$('#deleteGarmentButton2').on('click', ondeleteGarmentButton)
 
 // user clicks to start creating outfit
 const onChangePasswordRequest = (event) => {

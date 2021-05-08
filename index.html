@@ -119,9 +119,6 @@
       <!--Add to Outfit-->
       <button id="addToOutfitButton">Add To Outfit</button>
 
-      <!--Delete Garment-->
-      <button id="deleteGarmentButton">Delete Garment</button>
-
 
       <!--Search Again-->
       <button id="restartOutfitButton">Restart Outfit</button>
@@ -191,10 +188,12 @@
       <!--Garment Update-->
       <p id="garmentUpdate">Update Garment</p>
       <form id="garmentUpdateForm">
+        <input name="garment[id]" type="text" placeholder="Garment ID" >
         <input name="garment[cleaningStatus]" type="text" placeholder="Clean Status">
-        <input name="garment[wornDate]" type="text" placeholder="Worn Date">
+        <input name="garment[wornDate]" type="date" placeholder="Worn Date">
         <input type="submit" value="Update Garment"/>
       </form>
+
 
       <!-- Display Garment -->
       <div id="garmentView">
@@ -209,6 +208,15 @@
             <input type="file" id="uploadedImage" >
           </div>
         </div> -->
+      </div>
+
+        <!--Delete Garment-->
+      <div id="garmentDeleteForm">
+        <form id="garmentDeleteForm2">
+          <p id="garmentDelete1">Delete Garment</p>
+            <input name="garment[id]" type="text" placeholder="Garment ID" >
+            <input id="deleteGarmentButton" type="submit" value="Delete Garment"/>
+        </form>
       </div>
 
       <!-- <div class="flex-container">
@@ -351,7 +359,8 @@
               </a>
           </div>
       </div> -->
-
+      <!-- Delete Garment-->
+      <button id="deleteGarmentButton2">Delete Garment</button>
       <!-- Update Garment-->
       <button id="updateGarmentButton">Update Garment</button>
 

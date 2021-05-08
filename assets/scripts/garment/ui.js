@@ -42,6 +42,7 @@ const onGarmentSearchSuccess = function (response) {
       </div>`)
   })
   $('#updateGarmentButton').show()
+  $('#deleteGarmentButton2').show()
   $('#garmentSearchForm').trigger('reset')
   $('#garmentView').show()
 
@@ -79,8 +80,8 @@ const onGarmentIDSearchSuccess = function (response) {
 
       </div>`)
   $('#updateGarmentButton').show()
-  $('#updateGarmentButton').html(${garment._id})
-  $('#garmentSearchForm').trigger('reset')
+  $('#deleteGarmentButton2').show()
+  $('#garmentIDSearchForm').trigger('reset')
   $('#garmentView').show()
 }
 
@@ -97,7 +98,7 @@ const onGarmentIDSearchSuccess = function (response) {
 
 const onGarmentSearchFailure = function () {
   $('#message').text('Garment Not Found')
-  $('#sign-in').trigger('reset')
+  $('#garmentSearchForm').trigger('reset')
 }
 //
 const onGarmentUpdateSuccess = function (response) {
@@ -113,16 +114,36 @@ const onGarmentUpdateSuccess = function (response) {
     <p>Worn Date: ${garment.wornDate}</p>
     <p>Garment ID: ${garment._id}</p>
   </div>`)
-  $('#garmentSearchForm').trigger('reset')
+  $('#garmentUpdateForm').trigger('reset')
   $('#garmentView').show()
 }
 //
 const onGarmentUpdateFailure = function () {
   $('#message').text('Garment Update Failed')
-  $('#change-password').trigger('reset')
+  $('#garmentUpdateForm').trigger('reset')
 }
 
-//
+// on successfull  garment delete
+const onGarmentDeleteSuccess = function (response) {
+  $('#message').text('Garment Deleted')
+  store.user.garment = response.garment
+  $('#garmentDeleteForm2').trigger('reset')
+  $('#garmentView').hide()
+  $('#userCloset').hide()
+  // const garment = store.user.garment
+
+  // $('#signinButton2').show()
+  // $('#signupForm').hide()
+  // $('#sign-up').hide()
+  // $('#sign-in').show()
+  // $('#signinForm').show()
+}
+
+// On garment delete  failure
+const onGarmentDeleteFailure = function () {
+  $('#message').text('Garment Not Deleted')
+  $('#garmentDeleteForm2').trigger('reset')
+}
 // const onSignOutSuccess = function () {
 //   store.user = null
 //   $('#message').text('You Have Been Signed Out')
@@ -153,7 +174,9 @@ module.exports = {
   onGarmentSearchFailure,
   onGarmentUpdateSuccess,
   onGarmentUpdateFailure,
-  onGarmentIDSearchSuccess
+  onGarmentIDSearchSuccess,
+  onGarmentDeleteSuccess,
+  onGarmentDeleteFailure
   // onSignInSuccess,
   // onSignInFailure,
   // onChangePasswordSuccess,

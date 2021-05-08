@@ -46,22 +46,22 @@ const garmentIDSearch = function (id) {
     }
   })
 }
-// const signOut = function () {
-//   return $.ajax({
-//     method: 'DELETE',
-//     url: config.apiUrl + '/sign-out',
-//     headers: {
-//       Authorization: 'Bearer ' + store.user.token
-//     }
-//   })
-// }
+const garmentDelete = function (id) {
+  return $.ajax({
+    method: 'DELETE',
+    url: config.apiUrl + '/garments/' + id,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
 
 module.exports = {
   garmentAdd,
   garmentSearch,
   garmentUpdate,
-  garmentIDSearch
-  // signIn,
+  garmentIDSearch,
+  garmentDelete
   // changePassword,
   // signOut
 

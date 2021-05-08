@@ -32,12 +32,13 @@ const onGarmentUpdate = function (event) {
   const form = event.target
   const garmentData = getFormFields(form)
   const id = garmentData.garment.id
-    .api.garmentUpdate(garmentData, id)
+
+  api.garmentUpdate(garmentData, id)
     .then(ui.onGarmentUpdateSuccess)
     .catch(ui.onGarmentUpdateFailure)
 }
 
-const onGarmentIDSearch = function (event, garmentNumber) {
+const onGarmentIDSearch = function (event) {
   event.preventDefault()
   const form = event.target
   const garmentData = getFormFields(form)
@@ -46,21 +47,24 @@ const onGarmentIDSearch = function (event, garmentNumber) {
     .then(ui.onGarmentIDSearchSuccess)
     .catch(ui.onGarmentSearchFailure)
 }
-//
-// const onSignOut = function (event) {
-//   event.preventDefault()
-//   const form = event.target
-//   const userInfo = getFormFields(form)
-//   api.signOut(userInfo)
-//     .then(ui.onSignOutSuccess)
-//     .catch(ui.onSignOutFailure)
-// }
 
+// on garment delete event
+const onGarmentDelete = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const garmentData = getFormFields(form)
+  // const id = garmentData.garment.id
+
+  api.garmentDelete(garmentData.garment.id)
+    .then(ui.onGarmentDeleteSuccess)
+    .catch(ui.onGarmentDeleteFailure)
+}
 module.exports = {
   onGarmentAdd,
   onGarmentSearch,
   onGarmentUpdate,
-  onGarmentIDSearch
+  onGarmentIDSearch,
+  onGarmentDelete
   // onChangePassword,
   // onSignOut
 

@@ -116,6 +116,9 @@ const onSignOutSuccess = function () {
   $('#garmentIDSearchForm').hide()
   $('#instagramPost').hide()
   $('#garmentView').hide()
+  $('#garmentDelete1').hide()
+  $('#garmentDeleteForm').hide()
+  $('#deleteGarmentButton2').hide()
   setTimeout(function () {
     $('#message').fadeOut().empty()
   }, 3000)
