@@ -17538,7 +17538,7 @@ var onGarmentSearchFailure = function onGarmentSearchFailure() {
 //
 var onGarmentUpdateSuccess = function onGarmentUpdateSuccess(response) {
   // document.getElementById(`${store.garment.id}`)
-  store.user.garment = response.garment;
+  // store.user.garment = response.garment
   // const garment = response.garment
   // $('#garmentView').html('')
   $('#message').text('Garment Has Been Updated');
@@ -17557,7 +17557,7 @@ var onGarmentUpdateSuccess = function onGarmentUpdateSuccess(response) {
 };
 //
 var onGarmentUpdateFailure = function onGarmentUpdateFailure() {
-  $('#message').text('Garment Has Been Updated');
+  $('#message').text('Garment Not Updated');
   $('#garmentUpdateForm').trigger('reset');
 
   setTimeout(function () {
