@@ -16939,6 +16939,8 @@ var onContactUsLink = function onContactUsLink(event) {
   $('#instagramPost').hide();
   $('#garmentView').hide();
   $('#contactUsMessage').show();
+  $('#garmentAreaMessage').hide();
+  $('#garmentArea').hide();
 };
 
 $('#contactUs').on('click', onContactUsLink);
@@ -16965,6 +16967,8 @@ var onHomeButton = function onHomeButton(event) {
   $('#instagramPost').show();
   $('#garmentView').hide();
   $('#contactUsMessage').hide();
+  $('#garmentAreaMessage').hide();
+  $('#garmentArea').hide();
 };
 
 $('#homeButton').on('click', onHomeButton);
