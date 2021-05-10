@@ -44,10 +44,11 @@ $(() => {
   $('#deleteGarmentButton2').hide()
   $('#garmentPullAll').hide()
   $('#garmentIDPull').hide()
-  $('#inspirationalMessage').hide()
+  $('#inspirationalMessage1').hide()
   $('#entryMessage').hide()
   $('#pullAllGarments').hide()
   $('#garmentViewAll').hide()
+  $('#contactUsMessage').hide()
   $('#garmentAddForm').on('submit', garmentEvents.onGarmentAdd)
   $('#pullAllGarments').on('click', garmentEvents.onGarmentSearch)
   $('#garmentUpdateForm').on('submit', garmentEvents.onGarmentUpdate)
@@ -58,6 +59,7 @@ $(() => {
   $('#returnSignupSection').hide()
   $('#garmentIDSearchForm').on('submit', garmentEvents.onGarmentIDSearch)
   $('#garmentDeleteForm').on('submit', garmentEvents.onGarmentDelete)
+  $('#contactUs').on('click', authEvents.onContactUsLink)
 })
 
 // user clicks to start creating outfit
@@ -65,7 +67,7 @@ const onCreateOutfit = (event) => {
   $('#garmentSearch').show()
   $('#garmentSearchForm').show()
   $('#youTubeVideos').hide()
-  $('#inspirationalMessage').hide()
+  $('#inspirationalMessage1').hide()
   $('#change-password').hide()
   $('#garmentPullAll').show()
   $('#garmentIDSearchForm').show()
@@ -81,7 +83,7 @@ const onSearchGarment1 = (event) => {
   $('#garmentSearch').show()
   $('#garmentSearchForm').show()
   $('#youTubeVideos').hide()
-  $('#inspirationalMessage').hide()
+  $('#inspirationalMessage1').hide()
   $('#change-password').hide()
   $('#garmentIDSearchForm').show()
   $('#pullAllGarments').show()
@@ -108,7 +110,7 @@ const onAddGarmentButton = (event) => {
   $('#garmentAddForm').show()
   $('#garmentSearchForm').hide()
   $('#youTubeVideos').hide()
-  $('#inspirationalMessage').hide()
+  $('#inspirationalMessage1').hide()
   $('#change-password').hide()
   $('#garmentPullAll').hide()
   $('#garmentIDPull').hide()
@@ -186,7 +188,7 @@ const onChangePasswordRequest = (event) => {
   $('#passwordChangeForm').show()
   $('#change-password').show()
   $('#youTubeVideos').hide()
-  $('#inspirationalMessage').hide()
+  $('#inspirationalMessage1').hide()
   $('#garmentPullAll').hide()
   $('#garmentAdd').hide()
   $('#garmentAddForm').hide()
@@ -197,6 +199,22 @@ const onChangePasswordRequest = (event) => {
 }
 $('#changePasswordButton1').on('click', onChangePasswordRequest)
 
+// const onContactUsLink = (event) => {
+//   $('#passwordChangeForm').hide()
+//   $('#change-password').hide()
+//   $('#youTubeVideos').hide()
+//   $('#inspirationalMessage').hide()
+//   $('#garmentPullAll').hide()
+//   $('#garmentAdd').hide()
+//   $('#garmentAddForm').hide()
+//   $('#garmentIDPull').hide()
+//   $('#garmentSearchForm').hide()
+//   $('#instagramPost').hide()
+//   $('#garmentView').hide()
+//   $('#contactUsMessage').show()
+// }
+
+// $('#contactUs').on('click', onContactUsLink)
 // // user new user clicks
 // $('#headerLogo').on('click', <a href="https://virtual-closet-api.herokuapp.com">Continue</a>)
 

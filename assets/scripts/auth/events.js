@@ -39,10 +39,17 @@ const onSignOut = function (event) {
     .catch(ui.onSignOutFailure)
 }
 
+const onContactUsLink = function (event) {
+  event.preventDefault()
+  api.contactUs1()
+    .then(ui.onContactUsSuccess)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
-  onSignOut
+  onSignOut,
+  onContactUsLink
 
 }

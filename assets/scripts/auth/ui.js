@@ -48,7 +48,7 @@ const onSignInSuccess = function (response) {
   $('#youTubeVideos').show()
   $('#backgroundMusic').stop()
   $('#backgroundMusic').trigger('pause')
-  $('#inspirationalMessage').show()
+  $('#inspirationalMessage1').show()
   $('#garmentIDPull').hide()
   $('#instagramPost').show()
   $('#returnSignupSection').hide()
@@ -110,7 +110,7 @@ const onSignOutSuccess = function () {
   $('#youTubeVideos').hide()
   $('#garmentAdd').hide()
   $('#garmentSearch').hide()
-  $('#inspirationalMessage').hide()
+  $('#inspirationalMessage1').hide()
   $('#backgroundMusic').trigger('play')
   $('#garmentPullAll').hide()
   $('#garmentIDSearchForm').hide()
@@ -119,6 +119,7 @@ const onSignOutSuccess = function () {
   $('#garmentDelete1').hide()
   $('#garmentDeleteForm').hide()
   $('#deleteGarmentButton2').hide()
+  $('#contactUsMessage').hide()
   setTimeout(function () {
     $('#message').fadeOut().empty()
   }, 3000)
@@ -131,6 +132,43 @@ const onSignOutFailure = function () {
   }, 3000)
 }
 
+const onContactUsSuccess = function () {
+  $('#contactUsMessage').show()
+  $('#garmentPullAll').hide()
+  $('#garmentIDSearchForm').hide()
+  $('#instagramPost').hide()
+  $('#garmentView').hide()
+  $('#garmentDelete1').hide()
+  $('#garmentDeleteForm').hide()
+  $('#deleteGarmentButton2').hide()
+  $('#change-password').hide()
+  $('#menu').hide()
+  $('#headerLogo').hide()
+  $('#passwordChangeForm').hide()
+  $('#signoutButton').hide()
+  $('#userMessage').hide()
+  $('#createOutfitButton').hide()
+  $('#searchGarmentButton1').hide()
+  $('#garmentAddButton1').hide()
+  $('#change-password').hide()
+  $('#entryButton').hide()
+  $('#entryMessage').hide()
+  $('#sign-up').hide()
+  $('#sign-in').hide()
+  $('#signupForm').hide()
+  $('#signinForm').hide()
+  $('#deleteGarmentButton').hide()
+  $('#updateGarmentButton').hide()
+  $('#garmentUpdateForm').hide()
+  $('#garmentSearchForm').hide()
+  $('#garmentAddForm').hide()
+  $('#entryMessage').hide()
+  $('#youTubeVideos').hide()
+  $('#garmentAdd').hide()
+  $('#garmentSearch').hide()
+  $('#inspirationalMessage').hide()
+}
+
 module.exports = {
   onSignUpSuccess,
   onSignUpFailure,
@@ -139,6 +177,7 @@ module.exports = {
   onChangePasswordSuccess,
   onChangePasswordFailure,
   onSignOutSuccess,
-  onSignOutFailure
+  onSignOutFailure,
+  onContactUsSuccess
 
 }

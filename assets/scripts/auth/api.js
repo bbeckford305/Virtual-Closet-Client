@@ -39,10 +39,21 @@ const signOut = function () {
   })
 }
 
+const contactUs1 = function () {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/contact-us',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
+  signOut,
+  contactUs1
 
 }
