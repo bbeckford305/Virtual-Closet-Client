@@ -24,7 +24,6 @@ $(() => {
   $('#createOutfitButton').hide()
   $('#addToOutfitButton').hide()
   $('#garmentDeleteForm').hide()
-  $('#updateGarmentButton').hide()
   $('#searchGarmentButton1').hide()
   $('#restartOutfitButton').hide()
   $('#addImageButton').hide()
@@ -40,6 +39,8 @@ $(() => {
   $('#newUserButton').hide()
   $('#returnUserButton').hide()
   $('#menu').hide()
+  $('#garmentDeleteForm2').hide()
+  $('#deleteGarmentButton').hide()
   $('#garmentDelete1').hide()
   $('#deleteGarmentButton2').hide()
   $('#garmentPullAll').hide()
@@ -49,53 +50,122 @@ $(() => {
   $('#pullAllGarments').hide()
   $('#garmentViewAll').hide()
   $('#contactUsMessage').hide()
-  $('#garmentAddForm').on('submit', garmentEvents.onGarmentAdd)
-  $('#pullAllGarments').on('click', garmentEvents.onGarmentSearch)
-  $('#garmentUpdateForm').on('submit', garmentEvents.onGarmentUpdate)
+  $('#garmentAreaMessage').hide()
+  $('#garmentArea').hide()
   $('#youTubeVideos').hide()
   $('#garmentIDSearchForm').hide()
   $('#instagramPost').hide()
   $('#returnUserSection').hide()
   $('#returnSignupSection').hide()
+  $('#garmentAddForm').on('submit', garmentEvents.onGarmentAdd)
+  $('#pullAllGarments').on('click', garmentEvents.onGarmentSearch)
+  $('#garmentUpdateForm').on('submit', garmentEvents.onGarmentUpdate)
   $('#garmentIDSearchForm').on('submit', garmentEvents.onGarmentIDSearch)
-  $('#garmentDeleteForm').on('submit', garmentEvents.onGarmentDelete)
-  $('#contactUs').on('click', authEvents.onContactUsLink)
+  $('#garmentDeleteForm2').on('submit', garmentEvents.onGarmentDelete)
+  // $('#contactUs').on('click', authEvents.onContactUsLink)
 })
 
 // user clicks to start creating outfit
 const onCreateOutfit = (event) => {
-  $('#garmentSearch').show()
-  $('#garmentSearchForm').show()
+  $('#garmentUpdate').hide()
+  $('#garmentUpdateForm').hide()
+  $('#garmentDeleteForm2').hide()
+  $('#deleteGarmentButton').hide()
+  $('#garmentIDDelete').hide()
+  $('#garmentAreaMessage').show()
+  $('#garmentArea').show()
+  $('#garmentSearch').hide()
+  $('#garmentSearchForm').hide()
   $('#youTubeVideos').hide()
   $('#inspirationalMessage1').hide()
   $('#change-password').hide()
-  $('#garmentPullAll').show()
-  $('#garmentIDSearchForm').show()
+  $('#garmentIDSearchForm').hide()
   $('#pullAllGarments').show()
-  $('#garmentIDPull').show()
+  $('#garmentPullAll').show()
+  $('garmentUpdateButton').show()
+  $('#garmentAdd').hide()
+  $('#garmentAddForm').hide()
+  $('#garmentIDPull').hide()
   $('#instagramPost').hide()
   $('#garmentView').hide()
+  $('#contactUsMessage').hide()
 }
 $('#createOutfitButton').on('click', onCreateOutfit)
 
 // user clicks to start garment search
 const onSearchGarment1 = (event) => {
-  $('#garmentSearch').show()
-  $('#garmentSearchForm').show()
+  $('#garmentDeleteForm2').hide()
+  $('#deleteGarmentButton').hide()
+  $('#garmentIDDelete').hide()
+  $('#garmentAreaMessage').show()
+  $('#garmentArea').show()
+  $('#garmentSearch').hide()
+  $('#garmentSearchForm').hide()
   $('#youTubeVideos').hide()
   $('#inspirationalMessage1').hide()
   $('#change-password').hide()
-  $('#garmentIDSearchForm').show()
+  $('#garmentIDSearchForm').hide()
   $('#pullAllGarments').show()
   $('#garmentPullAll').show()
   $('#garmentAdd').hide()
   $('#garmentAddForm').hide()
-  $('#garmentIDPull').show()
+  $('#garmentIDPull').hide()
   $('#instagramPost').hide()
   $('#garmentView').hide()
+  $('garmentUpdateButton').show()
+  $('#contactUsMessage').hide()
+  $('#garmentUpdateForm').hide()
 }
 $('#searchGarmentButton1').on('click', onSearchGarment1)
 
+const onpullAllGarments1 = (event) => {
+  $('#garmentDeleteForm2').hide()
+  $('#deleteGarmentButton').hide()
+  $('#garmentIDDelete').hide()
+  $('#garmentAreaMessage').hide()
+  $('#garmentArea').hide()
+  $('#garmentSearch').hide()
+  $('#garmentSearchForm').hide()
+  $('#youTubeVideos').hide()
+  $('#inspirationalMessage1').hide()
+  $('#change-password').hide()
+  $('#garmentIDSearchForm').hide()
+  $('#pullAllGarments').hide()
+  $('#garmentPullAll').hide()
+  $('#garmentAdd').hide()
+  $('#garmentAddForm').hide()
+  $('#garmentIDPull').hide()
+  $('#instagramPost').hide()
+  $('#garmentView').show()
+  $('#contactUsMessage').hide()
+}
+$('#pullAllGarments').on('click', onpullAllGarments1)
+
+const ongarmentSearchButton1 = (event) => {
+  $('#garmentDeleteForm2').hide()
+  $('#deleteGarmentButton').hide()
+  $('#garmentIDDelete').hide()
+  $('#garmentAreaMessage').hide()
+  $('#garmentArea').hide()
+  $('#garmentSearch').hide()
+  $('#garmentSearchForm').hide()
+  $('#youTubeVideos').hide()
+  $('#inspirationalMessage1').hide()
+  $('#change-password').hide()
+  $('#garmentIDSearchForm').show()
+  $('#pullAllGarments').hide()
+  $('#garmentPullAll').hide()
+  $('#garmentAdd').hide()
+  $('#garmentAddForm').hide()
+  $('#garmentIDPull').hide()
+  $('#garmentIDPull').hide()
+  $('#instagramPost').hide()
+  $('#garmentView').hide()
+  $('#contactUsMessage').hide()
+  $('#garmentIDForm').show()
+  $('#garmentIDSearchForm').trigger('reset')
+}
+$('#garmentSearchButton').on('click', ongarmentSearchButton1)
 // user clicks to enter closet
 const onEnterCloset = (event) => {
   $('#newUserButton').show()
@@ -106,6 +176,13 @@ $('#entryButton').on('click', onEnterCloset)
 
 // user clicks to add garment
 const onAddGarmentButton = (event) => {
+  $('#garmentUpdate').hide()
+  $('#garmentUpdateForm').hide()
+  $('#garmentIDForm').hide()
+  $('#garmentIDSearchForm').hide()
+  $('#garmentDeleteForm2').hide()
+  $('#deleteGarmentButton').hide()
+  $('#garmentIDDelete').hide()
   $('#garmentAdd').show()
   $('#garmentAddForm').show()
   $('#garmentSearchForm').hide()
@@ -116,6 +193,7 @@ const onAddGarmentButton = (event) => {
   $('#garmentIDPull').hide()
   $('#instagramPost').hide()
   $('#garmentView').hide()
+  $('#contactUsMessage').hide()
 }
 $('#garmentAddButton1').on('click', onAddGarmentButton)
 
@@ -168,23 +246,64 @@ const onReturnUser = (event) => {
 $('#returnUserButton').on('click', onReturnUser)
 
 // user update garment
-const onUpdateGarmentButton = (event) => {
+const onGarmentUpdateButton = (event) => {
+  $('#garmentDeleteForm2').hide()
+  $('#deleteGarmentButton').hide()
+  $('#garmentIDDelete').hide()
   $('#garmentUpdate').show()
   $('#garmentUpdateForm').show()
+  $('#garmentAreaMessage').hide()
+  $('#garmentArea').hide()
+  $('#garmentSearch').hide()
+  $('#garmentAdd').hide()
+  $('#garmentAddForm').hide()
+  $('#garmentSearchForm').hide()
+  $('#youTubeVideos').hide()
+  $('#inspirationalMessage1').hide()
+  $('#change-password').hide()
+  $('#garmentPullAll').hide()
+  $('#garmentIDPull').hide()
+  $('#instagramPost').hide()
+  $('#garmentView').hide()
+  $('#contactUsMessage').hide()
+  $('#garmentUpdateForm').trigger('reset')
 }
-$('#updateGarmentButton').on('click', onUpdateGarmentButton)
+$('#garmentUpdateButton').on('click', onGarmentUpdateButton)
 
-// user update garment
-const ondeleteGarmentButton = (event) => {
-  $('#garmentDelete1').show()
-  $('#garmentDeleteForm').show()
-  $('#deleteGarmentButton2').hide()
+// user delete garment
+const onGarmentDeleteButton = (event) => {
+  $('#garmentDeleteForm2').show()
   $('#deleteGarmentButton').show()
+  $('#garmentIDDelete').show()
+  $('#garmentUpdate').hide()
+  $('#garmentUpdateForm').hide()
+  $('#garmentAreaMessage').hide()
+  $('#garmentArea').hide()
+  $('#garmentSearch').hide()
+  $('#garmentAdd').hide()
+  $('#garmentAddForm').hide()
+  $('#garmentSearchForm').hide()
+  $('#youTubeVideos').hide()
+  $('#inspirationalMessage1').hide()
+  $('#change-password').hide()
+  $('#garmentPullAll').hide()
+  $('#garmentIDPull').hide()
+  $('#instagramPost').hide()
+  $('#garmentView').hide()
+  $('#contactUsMessage').hide()
+  $('#garmentDeleteForm2').trigger('reset')
 }
-$('#deleteGarmentButton2').on('click', ondeleteGarmentButton)
+$('#garmentDeleteButton').on('click', onGarmentDeleteButton)
 
 // user clicks to start creating outfit
 const onChangePasswordRequest = (event) => {
+  $('#garmentUpdate').hide()
+  $('#garmentUpdateForm').hide()
+  $('#garmentIDForm').hide()
+  $('#garmentIDSearchForm').hide()
+  $('#garmentDeleteForm2').hide()
+  $('#deleteGarmentButton').hide()
+  $('#garmentIDDelete').hide()
   $('#passwordChangeForm').show()
   $('#change-password').show()
   $('#youTubeVideos').hide()
@@ -196,43 +315,56 @@ const onChangePasswordRequest = (event) => {
   $('#garmentSearchForm').hide()
   $('#instagramPost').hide()
   $('#garmentView').hide()
+  $('#contactUsMessage').hide()
 }
 $('#changePasswordButton1').on('click', onChangePasswordRequest)
 
-// const onContactUsLink = (event) => {
-//   $('#passwordChangeForm').hide()
-//   $('#change-password').hide()
-//   $('#youTubeVideos').hide()
-//   $('#inspirationalMessage').hide()
-//   $('#garmentPullAll').hide()
-//   $('#garmentAdd').hide()
-//   $('#garmentAddForm').hide()
-//   $('#garmentIDPull').hide()
-//   $('#garmentSearchForm').hide()
-//   $('#instagramPost').hide()
-//   $('#garmentView').hide()
-//   $('#contactUsMessage').show()
-// }
+const onContactUsLink = (event) => {
+  $('#garmentUpdate').hide()
+  $('#garmentUpdateForm').hide()
+  $('#garmentIDForm').hide()
+  $('#garmentIDSearchForm').hide()
+  $('#garmentDeleteForm2').hide()
+  $('#deleteGarmentButton').hide()
+  $('#garmentIDDelete').hide()
+  $('#passwordChangeForm').hide()
+  $('#change-password').hide()
+  $('#youTubeVideos').hide()
+  $('#inspirationalMessage').hide()
+  $('#garmentPullAll').hide()
+  $('#garmentAdd').hide()
+  $('#garmentAddForm').hide()
+  $('#garmentIDPull').hide()
+  $('#garmentSearchForm').hide()
+  $('#instagramPost').hide()
+  $('#garmentView').hide()
+  $('#contactUsMessage').show()
+}
 
-// $('#contactUs').on('click', onContactUsLink)
-// // user new user clicks
-// $('#headerLogo').on('click', <a href="https://virtual-closet-api.herokuapp.com">Continue</a>)
+$('#contactUs').on('click', onContactUsLink)
 
-// function updatemenu () {
-//   if (document.getElementById('responsive-menu').checked === true) {
-//     document.getElementById('menu').style.borderBottomRightRadius = '0'
-//     document.getElementById('menu').style.borderBottomLeftRadius = '0'
-//   } else {
-//     document.getElementById('menu').style.borderRadius = '43px'
-//   }
-// }
+const onHomeButton = (event) => {
+  $('#garmentUpdate').hide()
+  $('#garmentUpdateForm').hide()
+  $('#garmentIDForm').hide()
+  $('#garmentIDSearchForm').hide()
+  $('#garmentDeleteForm2').hide()
+  $('#deleteGarmentButton').hide()
+  $('#garmentIDDelete').hide()
+  $('#garmentAreaMessage').hide()
+  $('#garmentArea').hide()
+  $('#passwordChangeForm').hide()
+  $('#change-password').hide()
+  $('#youTubeVideos').show()
+  $('#inspirationalMessage').show()
+  $('#garmentPullAll').hide()
+  $('#garmentAdd').hide()
+  $('#garmentAddForm').hide()
+  $('#garmentIDPull').hide()
+  $('#garmentSearchForm').hide()
+  $('#instagramPost').show()
+  $('#garmentView').hide()
+  $('#contactUsMessage').hide()
+}
 
-// <script>
-//   $(function(){
-//     $("garmentImageUpload").change(function(event) {
-//       var x= URL.createObjectURL(event.target.files[0]);
-//       $("#uploadImage").attr("src",x);
-//       console.log(event);
-//     });
-//   })
-// </script>
+$('#homeButton').on('click', onHomeButton)

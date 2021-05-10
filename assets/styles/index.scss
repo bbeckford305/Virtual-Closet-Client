@@ -104,12 +104,28 @@ h1{
   text-shadow: 3px 2px $black;
 }
 
+#garmentAreaMessage {
+  font-family: $paris;
+  font-weight: normal;
+  font-size: 60px;
+  width: auto;
+  height: auto;
+  line-height: 230px;
+  text-align: center;
+}
+
 #message {
   font-family: $paris;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   text-align: center;
-
+  width: auto;
+  height: auto;
+  line-height: 230px;
+  text-align: center;
+  color: $roseGold;
+  text-shadow: 3px 2px $black;
+  z-index: 2;
 }
 
 #entryButton {
@@ -462,7 +478,131 @@ h1{
     border: 5px;
   }
 
+  #garmentAddButton2 {
+    color: $black;
+    font-family: $ovo;
+    background-color: $roseGold;
+    right: 0;
+    align-items: flex-end;
 
+  }
+
+  #pullAllGarments {
+    color: $black;
+    font-family: $ovo;
+    background-color: $roseGold;
+    right: 0;
+    align-items: flex-end;
+
+  }
+
+  #garmentSearchButton {
+    color: $black;
+    font-family: $ovo;
+    background-color: $roseGold;
+    right: 0;
+    align-items: flex-end;
+
+  }
+
+  #garmentUpdateButton {
+    color: $black;
+    font-family: $ovo;
+    background-color: $roseGold;
+    right: 0;
+    align-items: flex-end;
+
+  }
+
+  #garmentDeleteButton {
+    color: $black;
+    font-family: $ovo;
+    background-color: $roseGold;
+    right: 0;
+    align-items: flex-end;
+
+  }
+
+  #deleteGarmentButton {
+    color: $black;
+    font-family: $ovo;
+    background-color: $roseGold;
+    right: 0;
+    align-items: flex-end;
+
+  }
+  #garmentIDButton {
+    color: $black;
+    font-family: $ovo;
+    background-color: $roseGold;
+    right: 0;
+    align-items: flex-end;
+
+  }
+
+  #garmentUpdateButtton2 {
+    color: $black;
+    font-family: $ovo;
+    background-color: $roseGold;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+    width: 136px;
+    height: 56px;
+  }
+
+  #garmentArea {
+    background: $pinktransparent;
+    padding: 4px;
+    border-radius: 5px;
+    width: 700px;
+    margin: auto;
+    margin-top: 250px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    height: 200px;
+  }
+
+  #garmentIDSearchForm {
+    background: $pinktransparent;
+    padding: 4px;
+    border-radius: 5px;
+    width: 200px;
+    margin: auto;
+    margin-top: 250px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+  }
+
+  #garmentUpdateForm {
+    background: $pinktransparent;
+    padding: 4px;
+    border-radius: 5px;
+    width: 400px;
+    height: 350px;
+    margin: auto;
+    margin-top: 250px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+  }
+
+  #garmentDeleteForm2 {
+    background: $pinktransparent;
+    padding: 4px;
+    border-radius: 5px;
+    width: 200px;
+    margin: auto;
+    margin-top: 250px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+  }
 
 #menu {
 	background: $blushPink;
@@ -475,7 +615,8 @@ h1{
   width: 100%;
   z-index: 2;
 }
-#menu ul, #menu li {
+
+#menu ul, #menu li{
 	margin: 0 auto;
 	padding: 0;
 	list-style: none
@@ -589,6 +730,31 @@ align-items: center;
   list-style-type: none;
 }
 
+#contactUs button {
+
+  display: block;
+  line-height: 38px;
+  padding: 0 14px;
+  text-decoration: none;
+  color: $trolleyGray;
+  font-size: 15px;
+  border: none;
+  font-family: sans-serif;
+  font-weight: normal;
+}
+
+#homeButton button {
+
+  display: block;
+  line-height: 38px;
+  padding: 0 14px;
+  text-decoration: none;
+  color: $trolleyGray;
+  font-size: 15px;
+  border: none;
+  font-family: sans-serif;
+  font-weight: normal;
+}
 
 #contactUsMessage {
 display: flex;
@@ -602,6 +768,7 @@ margin-top: 250px;
 border-radius: 5px;
 font-family: $ovo;
 font-weight: bold;
+
 }
 
 #cM3 {

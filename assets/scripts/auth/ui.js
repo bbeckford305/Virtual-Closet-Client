@@ -6,18 +6,24 @@ const onSignUpSuccess = function () {
   $('#message').text('Thank You For Registering')
   $('#sign-up').trigger('reset')
   $('#signupForm').hide()
+  $('#signinForm').show()
   $('#sign-up').hide()
   $('#sign-in').show()
   $('#returnUserSection').hide()
+  $('#returnSignupSection').show()
 
   setTimeout(function () {
-    $('#message').fadeOut().empty()
+    $('#message').text('')
   }, 3000)
 }
 
 const onSignUpFailure = function () {
   $('#message').text('Registration Failure')
   $('#sign-up').trigger('reset')
+
+  setTimeout(function () {
+    $('#message').text('')
+  }, 3000)
 }
 
 const onSignInSuccess = function (response) {
@@ -39,12 +45,10 @@ const onSignInSuccess = function (response) {
   $('#menu').show()
   $('#headerLogo').hide()
   $('#deleteGarmentButton').hide()
-  $('#updateGarmentButton').hide()
   $('#passwordChangeForm').hide()
   $('#change-password').hide()
   $('#signoutButton').show()
   $('#deleteGarmentButton').hide()
-  $('#updateGarmentButton').hide()
   $('#youTubeVideos').show()
   $('#backgroundMusic').stop()
   $('#backgroundMusic').trigger('pause')
@@ -53,7 +57,7 @@ const onSignInSuccess = function (response) {
   $('#instagramPost').show()
   $('#returnSignupSection').hide()
   setTimeout(function () {
-    $('#message').fadeOut().empty()
+    $('#message').text('')
   }, 3000)
 }
 
@@ -61,15 +65,16 @@ const onSignInFailure = function () {
   $('#message').text('Email/Password Combination Incorrect')
   $('#sign-in').trigger('reset')
   setTimeout(function () {
-    $('#message').fadeOut().empty()
+    $('#message').text('')
   }, 3000)
 }
 
 const onChangePasswordSuccess = function () {
   $('#message').text('Your Password Has Been Changed')
   $('#change-password').trigger('reset')
+  $('#contactUsMessage').hide()
   setTimeout(function () {
-    $('#message').fadeOut().empty()
+    $('#message').text('')
   }, 3000)
 }
 
@@ -77,7 +82,7 @@ const onChangePasswordFailure = function () {
   $('#message').text('Password Change Failed')
   $('#change-password').trigger('reset')
   setTimeout(function () {
-    $('#message').fadeOut().empty()
+    $('#message').text('')
   }, 3000)
 }
 
@@ -102,7 +107,6 @@ const onSignOutSuccess = function () {
   $('#signupForm').hide()
   $('#signinForm').hide()
   $('#deleteGarmentButton').hide()
-  $('#updateGarmentButton').hide()
   $('#garmentUpdateForm').hide()
   $('#garmentSearchForm').hide()
   $('#garmentAddForm').hide()
@@ -119,16 +123,21 @@ const onSignOutSuccess = function () {
   $('#garmentDelete1').hide()
   $('#garmentDeleteForm').hide()
   $('#deleteGarmentButton2').hide()
+  $('#garmentDeleteForm2').hide()
+  $('#deleteGarmentButton').hide()
+  $('#garmentIDDelete').hide()
   $('#contactUsMessage').hide()
+  $('#garmentAreaMessage').hide()
+  $('#garmentArea').hide()
   setTimeout(function () {
-    $('#message').fadeOut().empty()
+    $('#message').text('')
   }, 3000)
 }
 
 const onSignOutFailure = function () {
   $('#message').text('Please Try Signing Out Again')
   setTimeout(function () {
-    $('#message').fadeOut().empty()
+    $('#message').text('')
   }, 3000)
 }
 

@@ -7,13 +7,9 @@ const onGarmentAddSuccess = function (response) {
   $('#message').text('Garment Added')
   store.user.garment = response.garment
   $('#garmentAddForm').trigger('reset')
-  // const garment = store.user.garment
-
-  // $('#signinButton2').show()
-  // $('#signupForm').hide()
-  // $('#sign-up').hide()
-  // $('#sign-in').show()
-  // $('#signinForm').show()
+  setTimeout(function () {
+    $('#message').text('')
+  }, 3000)
 }
 
 // On garment add  failure
@@ -24,8 +20,6 @@ const onGarmentAddFailure = function () {
 
 // on successfull  garment search
 const onGarmentSearchSuccess = function (response) {
-  // console.log(response)
-  // store.user.garment = response.garment
   $('#message').text('Your Requested Garment')
   const garments = response.garments
   $('#garmentView').html('')
@@ -41,29 +35,16 @@ const onGarmentSearchSuccess = function (response) {
         <p>Garment ID: ${garment._id}</p>
       </div>`)
   })
-  $('#updateGarmentButton').show()
-  $('#deleteGarmentButton2').show()
   $('#garmentSearchForm').trigger('reset')
   $('#garmentView').show()
-
-//   // $('#change-password').show()
-//   // $('#sign-up').hide()
-//   // $('#sign-in').hide()
-//   // $('#signupForm').hide()
-//   // $('#signinForm').hide()
-//   // $('#entryPage').hide()
-//   // $('#entrySignIn').hide()
-//   // $('#entrySignInButton').hide()
-//   // $('#passwordChangeForm').show()
-//   // $('#signoutButton').show()
-//   // $('#newGameButton').show()
-//   // $('#gameLogo').show()
-//   // $('.userDropDown').show()
+  setTimeout(function () {
+    $('#message').text('')
+  }, 3000)
 }
+
 // alert($('#message').text())
 const onGarmentIDSearchSuccess = function (response) {
   store.user.garment = response.garment
-  $('#updateGarmentButton').show()
   $('#message').text('Your Requested Garment')
   const garment = response.garment
   $('#garmentView').html('')
@@ -79,93 +60,71 @@ const onGarmentIDSearchSuccess = function (response) {
         <p>Garment ID: ${garment._id}</p>
 
       </div>`)
-  $('#updateGarmentButton').show()
-  $('#deleteGarmentButton2').show()
   $('#garmentIDSearchForm').trigger('reset')
   $('#garmentView').show()
-}
 
-// <script></script>
-// <script>
-//   $(function(){
-//     $("garmentImageUpload").change(function(event) {
-//       var x= URL.createObjectURL(event.target.files[0]);
-//       $("#uploadImage").attr("src",x);
-//       console.log(event);
-//     });
-//   })
-// </script>
+  setTimeout(function () {
+    $('#message').text('')
+  }, 3000)
+}
 
 const onGarmentSearchFailure = function () {
   $('#message').text('Garment Not Found')
   $('#garmentSearchForm').trigger('reset')
+  setTimeout(function () {
+    $('#message').text('')
+  }, 3000)
 }
 //
 const onGarmentUpdateSuccess = function (response) {
   // document.getElementById(`${store.garment.id}`)
   store.user.garment = response.garment
-  const garment = response.garment
-  $('#garmentView').html('')
+  // const garment = response.garment
+  // $('#garmentView').html('')
   $('#message').text('Garment Has Been Updated')
-  $('#change-password').trigger('reset')
-  $('#garmentView').append(
-    `<div id="userCloset">
-    <p>Cleaning Status: ${garment.cleaningStatus}<p>
-    <p>Worn Date: ${garment.wornDate}</p>
-    <p>Garment ID: ${garment._id}</p>
-  </div>`)
+  // $('#garmentView').append(
+  //   `<div id="userCloset">
+  //   <p>Cleaning Status: ${garment.cleaningStatus}<p>
+  //   <p>Worn Date: ${garment.wornDate}</p>
+  //   <p>Garment ID: ${garment._id}</p>
+  // </div>`)
   $('#garmentUpdateForm').trigger('reset')
-  $('#garmentView').show()
+  $('#garmentView').hide()
+
+  setTimeout(function () {
+    $('#message').text('')
+  }, 3000)
 }
 //
 const onGarmentUpdateFailure = function () {
-  $('#message').text('Garment Update Failed')
+  $('#message').text('Garment Has Been Updated')
   $('#garmentUpdateForm').trigger('reset')
+
+  setTimeout(function () {
+    $('#message').text('')
+  }, 3000)
 }
 
 // on successfull  garment delete
 const onGarmentDeleteSuccess = function (response) {
   $('#message').text('Garment Deleted')
-  store.user.garment = response.garment
+  store.user.garment = null
   $('#garmentDeleteForm2').trigger('reset')
   $('#garmentView').hide()
   $('#userCloset').hide()
-  // const garment = store.user.garment
-
-  // $('#signinButton2').show()
-  // $('#signupForm').hide()
-  // $('#sign-up').hide()
-  // $('#sign-in').show()
-  // $('#signinForm').show()
+  setTimeout(function () {
+    $('#message').text('')
+  }, 3000)
 }
 
 // On garment delete  failure
 const onGarmentDeleteFailure = function () {
   $('#message').text('Garment Not Deleted')
   $('#garmentDeleteForm2').trigger('reset')
+  setTimeout(function () {
+    $('#message').text('')
+  }, 3000)
 }
-// const onSignOutSuccess = function () {
-//   store.user = null
-//   $('#message').text('You Have Been Signed Out')
-//   // $('#change-password').hide()
-//   // $('#entryPage').show()
-//   // $('#entrySignIn').show()
-//   // $('#entryMessage').show()
-//   // $('#entryButton').show()
-//   // $('#entrySignInButton').show()
-//   // $('#gameLogo').hide()
-//   // $('#passwordChangeForm').hide()
-//   // $('#signoutButton').hide()
-//   // $('#newGameButton').hide()
-//   // $('.container').hide()
-//   // $('#newGameButton2').hide()
-//   // $('.box').trigger('reset')
-//   // $('.box').empty()
-// }
-//
-// const onSignOutFailure = function () {
-//   $('#message').text('Please Try Signing Out Again')
-// }
 
 module.exports = {
   onGarmentAddSuccess,
@@ -177,11 +136,5 @@ module.exports = {
   onGarmentIDSearchSuccess,
   onGarmentDeleteSuccess,
   onGarmentDeleteFailure
-  // onSignInSuccess,
-  // onSignInFailure,
-  // onChangePasswordSuccess,
-  // onChangePasswordFailure,
-  // onSignOutSuccess,
-  // onSignOutFailure
 
 }
