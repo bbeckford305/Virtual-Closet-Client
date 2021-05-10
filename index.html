@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Virtual Closet</title>
+      <link rel="shortcut icon" href="public\Images\thumbnail.jpg">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+
+      <!-- Background Music -->
+      <audio id="backgroundMusic" autoplay loop>
+          <source src="public/audios/Bach-The-Violin-Concertos.mp3" type="audio/mpeg">
+      </audio>
+
+      <!--Entry Message-->
+      <h1 id="headerLogo">Virtual Closet</h1>
+
+      <!-- Inspirational Corner Message -->
+      <div id="inspirationalMessage1">
+        <div id="inspirationalMessage">
+          <h2>Inspirational</h2>
+        </div>
+        <div id="cornerMessage">
+          <h2>Corner</h2>
+        </div>
+      </div>
+      <!--Entry Button-->
+      <button id="entryButton">Enter</button>
+
+
+      <!-- Login Main Message -->
+      <h2 id="entryMessage">Welcome To Your Virtual Closet</h2>
+
+      <!-- <h2 id="userMessage">User Closet</h2> -->
+      <main class="container col-md-8">
+
+
+        <!--New User Button-->
+        <button id="newUserButton">New User</button>
+
+        <div id="alertMessages">
+          <p id="message"></p>
+        </div>
+
+
+        <!--Sign Up Button-->
+
+            <form id="sign-up">
+              <p id="signupForm">Register To Create Your Closet</p>
+              <div class="signupform1 row">
+                <div class="form-group col-md-6 ">
+                  <label for="inputFirstName">First Name</label>
+                  <input id="inputFirstName" name="credentials[firstName]" type="text" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputLastName">Last Name</label>
+                  <input id="inputLastName" name="credentials[lastName]" type="text" required>
+                </div>
+              </div>
+                <div id="emailSignup" class="form-group col-md-8">
+                  <label id="emailWord" for="inputEmail">Email</label>
+                  <input id="inputEmail" name="credentials[email]" type="email" required>
+                </div>
+              <div id="passwordSignup" class="password row">
+                <div id="passwordSignup1"class="form-group col-md-6">
+                  <label for="inputPassword">Password</label>
+                  <input id="inputPassword" name="credentials[password]" type="password" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputPasswordConfirm">Confirm Password</label>
+                  <input id="inputPasswordConfirm" name="credentials[password_confirmation]" type="password" required>
+                </div>
+              </div>
+                <div id="returnUserSection">
+                  <p id="returntoSignin">Returning User <button id="returntoSigninButton">Sign In</button></p>
+                  <input id="registerButton" type="submit" value="Register"/>
+                </div>
+
+            </form>
+
+        <!--Returning User Button-->
+        <button id="returnUserButton">Returning User</button>
+
+
+        <form id="sign-in" >
+          <p id="signinForm">Login</p>
+          <div class="signinform1 row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail2">Email</label>
+              <input id="inputEmail2" name="credentials[email]" type="email" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputPassword2">Password</label>
+              <input id="inputPassword2" name="credentials[password]" type="password" required>
+            </div>
+          </div>
+          <div id="returnSignupSection">
+            <p id="returntoSignup">New User <button id="returntoSignupButton">Sign Up</button></p>
+            <input id="loginButton" type="submit" value="Login"/>
+          </div>
+        </form>
+
+        <!--Change Password Button-->
+          <form id="change-password">
+            <p id="passwordChangeForm">Change Your Password</p>
+            <div class="changePasswordform1 row">
+              <div class="form-group col-md-6">
+                <label for="oldpasswordChange2">Old Password</label>
+              <input id="oldPassword" name="passwords[old]" type="password" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="newPasswordChange2">New Password</label>
+              <input id="newPassword" name="passwords[new]" type="password"  required>
+              </div>
+            </div>
+            <input id="changePWButton" type="submit" value="Change Password"/>
+          </form>
+
+        <!--Add to Outfit-->
+        <button id="addToOutfitButton">Add To Outfit</button>
+
+
+        <!--Search Again-->
+        <button id="restartOutfitButton">Restart Outfit</button>
+
+        <!--Add Image-->
+        <button id="addImageButton">Add Image</button>
+
+        <!--Garment Add-->
+        <form id="garmentAddForm">
+          <p id="garmentAdd">Add Your Garment</p>
+          <div class="garmentAddForm1 row">
+            <div class="form-group col-md-6 ">
+              <label for="garmentType">Garment Type</label>
+              <input id="garmentType1" name="garment[type]" type="text" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="garmentColor">Garment Color</label>
+              <input id="garmentColor1" name="garment[color]" type="text" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="cleaningMethod">Cleaning Method</label>
+              <input id="cleaningMethod1" name="garment[cleaningMethod]" type="text"required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="cleaningStatus">Clean Status</label>
+              <input id="cleaningStatus1" name="garment[cleaningStatus]" type="text" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="wornDate">Worn Date</label>
+              <input id="wornDate1" name="garment[wornDate]" type="date" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="weather">Weather Type</label>
+              <input id="weather1" name="garment[weather]" type="text"required>
+            </div>
+          </div>
+            <input id="garmentAddButton2" type="submit" value="Add Garment"/>
+            <!-- <label class="form-label" for="customFile">Upload Garment Image</label>
+            <input id="imageUpload" type="file" accept="image/gif, image/jpeg, image/png" name="image" class="form-control" style="display: none;" /> -->
+        </form>
+
+
+        <h3 id="garmentAreaMessage">Welcome To Your Garment Area</h3>
+            <div id="garmentArea" class="column">
+              <p>Garment Search</p>
+              <div id="garmentPullAll" class="column">
+                <button id="pullAllGarments">Pull All Garments</button>
+              </div>
+              <div class="column">
+                <button id="garmentSearchButton">Search By ID</button>
+              </div>
+              <p>Update Garment</p>
+              <div>
+                <button id="garmentUpdateButton">Update Garment</button>
+              </div>
+              <div>
+                <p>Delete Garment</p>
+                <button id="garmentDeleteButton">Delete Garment</button>
+              </div>
+            </div>
+
+        <!-- Pull all Garments -->
+        <!-- <div id="garmentPullAll">
+          <p id="pullAllGarmentHeader">View Entire Collection</p>
+          <button id="pullAllGarments">Pull All</button>
+        </div> -->
+
+        <!--Garment Search-->
+        <!-- <form id="garmentSearchForm">
+          <p id="garmentSearch">Search For Garment</p>
+                <!-- <input name="garment[id]" type="text" placeholder="Garment ID" > -->
+          <!-- <input name="garment[type]" type="text" placeholder="Garment Type" >
+          <input name="garment[color]" type="text" placeholder="Garment Color" >
+          <input name="garment[weather]" type="text" placeholder="Weather">
+          <input type="submit" value="Garment Search"/>
+        </form> -->
+
+        <!--Garment Search by ID-->
+        <form id="garmentIDSearchForm">
+          <div class="garmentSearch1 row">
+            <div class="form-group col-md-6 ">
+              <label for="searchByID">Garment ID Number</label>
+              <input id="garmentIDForm" name="garment[id]" type="text" required >
+            </div>
+          </div>
+          <input id="garmentIDButton" type="submit" value="Search"/>
+        </form>
+
+
+        <!--Garment Update-->
+        <form id="garmentUpdateForm">
+          <div class="garmentUpdate1 column">
+            <div class="form-group col-md-6 ">
+              <label for="updateGarmentID">Garment ID Number</label>
+              <input name="garment[id]" type="text" >
+            </div>
+            <div class="form-group col-md-6 ">
+              <label for="updateGarmentCS">Clean Status</label>
+              <input name="garment[cleaningStatus]" type="text" >
+            </div>
+            <div class="form-group col-md-6 ">
+              <label for="updateGarmentWD">Worn Date</label>
+              <input name="garment[wornDate]" type="date">
+            </div>
+          </div>
+          <input id="garmentUpdateButtton2" type="submit" value="Update Garment"/>
+        </form>
+
+
+        <!-- Display Garment -->
+        <div id="garmentView">
+
+          <!-- <button id="updateGarmentButton">Update Garment</button> -->
+          <!-- <div class="garmentImageView">
+            <div id="garmentImage">
+              <img src="garment/images.png" id="uploadImage" >
+            </div>
+            <div class="custom-file">
+              <label for="garmentImageUpload">Upload Garment Image</label>
+              <input type="file" id="uploadedImage" >
+            </div>
+          </div> -->
+        </div>
+
+          <!--Delete Garment-->
+          <form id="garmentDeleteForm2">
+            <div class="garmentDelete1 row">
+              <div class="form-group col-md-6 ">
+                <label for="deleteByID">Delete Garment</label>
+                <input id="garmentIDDelete" name="garment[id]" type="text" required >
+              </div>
+            </div>
+            <input id="deleteGarmentButton" type="submit" value="Delete Garment"/>
+          </form>
+
+
+        <!-- <div id="garmentDeleteForm">
+          <form id="garmentDeleteForm2">
+            <p id="garmentDelete1">Delete Garment</p>
+              <input name="garment[id]" type="text" placeholder="Garment ID" >
+              <input id="deleteGarmentButton" type="submit" value="Delete Garment"/>
+          </form>
+        </div> -->
+
+        <nav id='menu'>
+          <ul>
+            <li id="homeButton"><button>Home</button></li>
+            <li><a class='closetTab'>Personal Closet</a>
+              <ul class='subMenu'>
+                <li><button id="createOutfitButton">Create Outfit</button></li>
+                <li><button id="searchGarmentButton1">Search For Garment</button></li>
+                <li><button id="garmentAddButton1">Add Garment</button></li>
+              </ul>
+            </li>
+            <li><a class='accountArea'>Account</a>
+              <ul class='subMenu'>
+                <li><button id="changePasswordButton1">Change Password</button></li>
+                <li><button id="signoutButton">Sign Out</button></li>
+              </ul>
+            </li>
+            <li><a class='socialMedia'>Social Media</a>
+              <ul id="socialMediaSub" class='subMenu'>
+                <li><a href='https://www.youtube.com/'>YouTube</a></li>
+                <li><a href='https://www.instagram.com/'>Instagram</a></li>
+                <li><a href='https://www.facebook.com/'>Facebook</a></li>
+                <li><a href='https://www.pinterest.com/'>Pinterest</a></li>
+              </ul>
+            </li>
+            <li id="contactUs"><button>Contact Us</button></li>
+          </ul>
+
+        </nav>
+
+        <div id="youTubeVideos" class="vertical-menu">
+          <div>
+            <iframe width="400" height="230"
+            src="https://www.youtube.com/embed/n33W49x50HE"
+            title="Anna Wintour Answers Questions From Victoria Beckham, Camille Rowe and More | Go Ask Anna">
+            </iframe>
+          </div>
+          <div>
+            <iframe width="400" height="230"
+            src="https://www.youtube.com/embed/sAZCfDV0mEA"
+            title="MY CLOSET FAVORITES PART 2: WALLETS, CLOTHES, AND PERFUME | Heart Evangelista">
+            </iframe>
+          </div>
+          <div>
+            <iframe width="400" height="230"
+            src="https://www.youtube.com/embed/sR7QhrVwpvo"
+            title="Fingerprint-Protected Closet In Singapore | Bonkers Closets">
+            </iframe>
+          </div>
+          <div>
+            <iframe width="400" height="230"
+            src="https://www.youtube.com/embed/kVTVRuM_U40"
+            title="Jenna Lyons' Gorgeous Shoe Closet & Bathroom Tour | Allure">
+            </iframe>
+          </div>
+        </div>
+
+        <div id="instagramPost" class="column">
+          <div id="instagramVideo1" class="row">
+            <div>
+              <blockquote  class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CK9X7-4gs6T/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13">
+                <script async src="//www.instagram.com/embed.js"></script>
+              </blockquote>
+            </div>
+            <div>
+              <blockquote  class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CObNPjctm8I/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13">
+                <script async src="//www.instagram.com/embed.js"></script>
+              </blockquote>
+            </div>
+          </div>
+          <div id="instagramVideo2" class="row">
+            <div>
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/CL2BDXmHbjm/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13">
+                <script async src="//www.instagram.com/embed.js"></script>
+              </blockquote>
+            </div>
+            <div>
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/CLuJMPNIeXe/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13">
+                <script async src="//www.instagram.com/embed.js"></script>
+              </blockquote>
+            </div>
+          </div>
+          <div id="instagramVideo3" class="row">
+            <div>
+              <blockquote  class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CL4nJC0pNfO/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13">
+                <script async src="//www.instagram.com/embed.js"></script>
+              </blockquote>
+            </div>
+            <div>
+              <blockquote  class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CM1Rhw4L926/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13">
+                <script async src="//www.instagram.com/embed.js"></script>
+              </blockquote>
+            </div>
+        </div>
+      </div>
+
+
+
+
+        <div id="contactUsMessage">
+          <ul>
+            <li><p id="cM1"> Thank You For Wanting To Contact Us </p></li>
+            <li><p id="cM2">This site however is just for class project purposes</p></li>
+            <li><p id="cM3">Thank You</p></li>
+            <li><p id="cM4">Bridgette Beckford</p></li>
+            </ul>
+        </div>
+
+    </main>
+    </body>
+</html>

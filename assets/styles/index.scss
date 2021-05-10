@@ -1,0 +1,787 @@
+@import '~bootstrap/scss/bootstrap';
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ovo&display=swap');
+
+// Font Variables
+$tangerine: 'Tangerine', serif;
+$greatVibe: 'Great Vibes', cursive;
+$paris: 'Parisienne', cursive;
+$monsieur: 'Monsieur La Doulaise', cursive;
+$ovo: 'Ovo', serif;
+
+//Color Variables
+$blushPink: #f2d9d9;
+$black: #000000;
+$white: #ffffff;
+$mediumGray: #737373;
+$lightGray: #F2F2F2;
+$trolleyGray: #808080;
+$darkGray: #111111;
+$roseGold: #ff9985;
+$pinktransparent: rgba(242, 217, 217, 0.7);
+
+html {
+   margin: 0;
+   height: 100vh;
+   width: 100vw;
+   padding: 0;
+   position: relative;
+}
+
+body {
+  background-image:url(public/Images/Background-Image-three.jpg);
+  background-repeat: no-repeat;
+  background-color: $blushPink;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-family: $paris;
+  font-weight: normal;
+  font-size: 90px;
+  width: auto;
+  height: auto;
+  line-height: 230px;
+  text-align: center;
+}
+#alertMessages {
+
+}
+
+
+#inspirationalMessage1 {
+  font-family: $paris;
+  font-weight: normal;
+  width: 100%;
+  height: 100%;
+  line-height: 230px;
+  text-align: center;
+  position: fixed;
+  display: flex;
+  align-items: center;
+}
+
+#inspirationalMessage{
+  display: flex;
+  transform: rotate(90deg);
+  width: auto;
+  margin-left: 260px;
+  justify-content: center;
+  position: fixed;
+
+}
+
+#inspirationalMessage h2 {
+  font-size: 100px;
+  color: $roseGold;
+  text-shadow: 3px 2px $black;
+}
+
+#cornerMessage{
+  display: flex;
+  width: auto;
+  margin-top: 1050px;
+  height: 50%;
+  margin-right: 650px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-left: 600px;
+  position: fixed;
+}
+
+#cornerMessage h2 {
+  font-size: 100px;
+  color: $roseGold;
+  text-shadow: 3px 2px $black;
+}
+
+#garmentAreaMessage {
+  font-family: $paris;
+  font-weight: normal;
+  font-size: 60px;
+  width: auto;
+  height: auto;
+  line-height: 230px;
+  text-align: center;
+}
+
+#message {
+  font-family: $paris;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  width: auto;
+  height: auto;
+  line-height: 230px;
+  text-align: center;
+  color: $roseGold;
+  text-shadow: 3px 2px $black;
+  z-index: 2;
+}
+
+#entryButton {
+  font-family: $ovo;
+  padding: 0;
+  border: none;
+  color: $black;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: transparentize($white, 1);
+  position: fixed;
+  top: 49%;
+  left:18.7%;
+  transform: rotate(90deg);
+}
+
+#newUserButton{
+  font-family:$paris;
+  padding: 0;
+  border: none;
+  color: $black;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: transparentize($white, 1);
+  position: fixed;
+  width: auto;
+  height: auto;
+  right: 20.5%;
+  top: 47%
+}
+
+#garmentView {
+  background-color:  $pinktransparent;
+  font-family: $ovo;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#returnUserButton{
+  font-family: $paris;
+  padding: 0;
+  border: none;
+  color: $black;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: transparentize($white, 1);
+  position: fixed;
+  width: auto;
+  height: auto;
+  right: 2.5%;
+  bottom: 22%
+
+}
+
+#signupForm {
+  font-family: $paris;
+  color: $black;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+#signupform1 {
+  width: 80%;
+  min-height: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex: 1;
+}
+
+#password {
+  width: 70%;
+  min-height: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex: 1;
+
+}
+
+
+#inputEmail {
+  width: 80%;
+  min-height: 20px;
+  margin: 0 auto;
+}
+
+#emailWord {
+  display: flex;
+  justify-content: center;
+
+}
+
+
+#sign-up {
+  background: $pinktransparent;
+  padding: 4px;
+  border-radius: 5px;
+  margin: auto;
+  text-align: center;
+  width: 710px;
+  height: 300px;
+
+}
+
+#emailSignup {
+  margin-left: 130px;
+  margin-bottom: 40px;
+}
+
+#signinForm {
+  font-family: $paris;
+  color: $black;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+#signinform1 {
+  width: 80%;
+  min-height: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex: 1;
+}
+
+#sign-in {
+  background: $pinktransparent;
+  padding: 4px;
+  border-radius: 5px;
+  width: 560px;
+  height: 180px;
+  margin:auto;
+}
+
+#passwordChangeForm {
+  font-family: $paris;
+  color: $black;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+#changePasswordform1 {
+  width: 80%;
+  min-height: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex: 1;
+}
+
+#change-password {
+  background: $pinktransparent;
+  padding: 4px;
+  border-radius: 5px;
+  width: 650px;
+  margin: auto;
+  margin-top: 250px;
+}
+
+#garmentAdd {
+  font-family: $paris;
+  color: $black;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+#garmentAddForm1 {
+  width: 80%;
+  min-height: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex: 1;
+}
+
+#garmentAddForm {
+  background: $pinktransparent;
+  padding: 4px;
+  border-radius: 5px;
+  width: 700px;
+  margin: auto;
+  margin-top: 250px;
+}
+
+#registerButton {
+  color: $black;
+  font-family: $ovo;
+  background-color: $roseGold;
+  right: 0;
+  font-size: smaller;
+  }
+
+  #instagramPost {
+    position:fixed;
+    z-index: 1;
+    margin-right: 0px;
+    margin-left: 300px;
+    display: flex;
+    align-items: baseline;
+    margin-top: 50px;
+  }
+
+  #instagram-embed-0 {
+    height: 450px;
+
+  }
+
+  #instagram-embed-1 {
+    height: 220px;
+
+  }
+  #instagram-embed-2 {
+    height: 450px;
+
+  }
+
+  #instagram-embed-3 {
+    height: 450px;
+
+  }
+
+  #instagram-embed-4 {
+    height: 450px;
+
+  }
+  #instagram-embed-5 {
+    height: 400px;
+
+  }
+
+  #instagramVideo1 {
+  width: 400px;
+  }
+
+  #instagramVideo2 {
+  width: 400px;
+  }
+
+  #instagramVideo3 {
+   width: 400px;
+  }
+
+  #returntoSignupButton {
+    font-family: $ovo;
+    color: $roseGold;
+    background-color:transparent;
+    font-weight: bold;
+    right: 0;
+    align-items: center;
+    font-size: 15px;
+    padding: 0;
+    border: none;
+    text-shadow: 2px 0px $black;
+
+    }
+
+  #returntoSignup {
+    font-family: $paris;
+    font-weight: bold;
+    right: 0;
+    align-items: center;
+    padding: 0;
+    border: none;
+    font-size: 20px;
+    margin-bottom: 0px;
+
+    }
+    #returntoSignin {
+      margin-bottom: 0px;
+    }
+
+  #returntoSigninButton {
+    font-family: $ovo;
+    color: $roseGold;
+    background-color:transparent;
+    font-weight: bold;
+    right: 0;
+    align-items: center;
+    font-size: 15px;
+    padding: 0;
+    border: none;
+    text-shadow: 2px 0px $black;
+    }
+
+  #returnSignupSection {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-right: 3px;
+
+  }
+
+  #returnUserSection {
+    font-family: $paris;
+    font-weight: bold;
+    right: 0;
+    align-items: center;
+    padding: 0;
+    border: none;
+    font-size: 20px;
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    }
+
+  #loginButton {
+    color: $black;
+    font-family: $ovo;
+    background-color: $roseGold;
+
+    }
+
+  #changePWButton {
+    color: $black;
+    font-family: $ovo;
+    background-color: $roseGold;
+
+    }
+
+  #garmentAddButton2 {
+    color: $black;
+    font-family: $ovo;
+    background-color: $roseGold;
+    right: 0;
+    align-items: flex-end;
+
+    }
+
+  #garmentView {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 700px;
+    margin: 0 auto;
+    text-transform: uppercase;
+  }
+
+  #userCloset {
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    border: 5px;
+  }
+
+  #garmentAddButton2 {
+    color: $black;
+    font-family: $ovo;
+    background-color: $roseGold;
+    right: 0;
+    align-items: flex-end;
+
+  }
+
+  #pullAllGarments {
+    color: $black;
+    font-family: $ovo;
+    background-color: $roseGold;
+    right: 0;
+    align-items: flex-end;
+
+  }
+
+  #garmentSearchButton {
+    color: $black;
+    font-family: $ovo;
+    background-color: $roseGold;
+    right: 0;
+    align-items: flex-end;
+
+  }
+
+  #garmentUpdateButton {
+    color: $black;
+    font-family: $ovo;
+    background-color: $roseGold;
+    right: 0;
+    align-items: flex-end;
+
+  }
+
+  #garmentDeleteButton {
+    color: $black;
+    font-family: $ovo;
+    background-color: $roseGold;
+    right: 0;
+    align-items: flex-end;
+
+  }
+
+  #deleteGarmentButton {
+    color: $black;
+    font-family: $ovo;
+    background-color: $roseGold;
+    right: 0;
+    align-items: flex-end;
+
+  }
+  #garmentIDButton {
+    color: $black;
+    font-family: $ovo;
+    background-color: $roseGold;
+    right: 0;
+    align-items: flex-end;
+
+  }
+
+  #garmentUpdateButtton2 {
+    color: $black;
+    font-family: $ovo;
+    background-color: $roseGold;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+    width: 136px;
+    height: 56px;
+  }
+
+  #garmentArea {
+    background: $pinktransparent;
+    padding: 4px;
+    border-radius: 5px;
+    width: 700px;
+    margin: auto;
+    margin-top: 250px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    height: 200px;
+  }
+
+  #garmentIDSearchForm {
+    background: $pinktransparent;
+    padding: 4px;
+    border-radius: 5px;
+    width: 200px;
+    margin: auto;
+    margin-top: 250px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+  }
+
+  #garmentUpdateForm {
+    background: $pinktransparent;
+    padding: 4px;
+    border-radius: 5px;
+    width: 400px;
+    height: 350px;
+    margin: auto;
+    margin-top: 250px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+  }
+
+  #garmentDeleteForm2 {
+    background: $pinktransparent;
+    padding: 4px;
+    border-radius: 5px;
+    width: 200px;
+    margin: auto;
+    margin-top: 250px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+  }
+
+#menu {
+	background: $blushPink;
+	color: $white;
+	height: 38px;
+	padding-left: 18px;
+	border-radius: 43px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+#menu ul, #menu li{
+	margin: 0 auto;
+	padding: 0;
+	list-style: none
+}
+#menu ul {
+	width: 100%;
+}
+#menu li {
+	float: left;
+	display: inline;
+	position: relative;
+  text-align: center;
+}
+#menu a {
+	display: block;
+	line-height: 38px;
+	padding: 0 14px;
+	text-decoration: none;
+	color: $trolleyGray;
+	font-size: 15px;
+  border: none;
+}
+#menu li button:hover {
+	color: $trolleyGray;
+}
+
+#menu button {
+  padding: 0;
+  border: none;
+  background: $blushPink;
+  font-family: $paris;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#menu input {
+	display: none;
+	margin: 0;
+	padding: 0;
+	height: 38px;
+	width: 100%;
+	opacity: 0;
+	cursor: pointer
+}
+#menu label {
+	display: none;
+	line-height: 38px;
+	text-align: center;
+	position: absolute;
+	left: 35px
+}
+#menu label:before {
+	font-size: 1.6em;
+	content: "\2261";
+	margin-left: 20px;
+}
+#menu ul.subMenu{
+	height: auto;
+	overflow: hidden;
+	width: 170px;
+	background: $blushPink;
+	position: absolute;
+	z-index: 99;
+	display: none;
+}
+#menu ul.subMenu li {
+	display: block;
+	width: 100%;
+}
+#menu ul.subMenu a {
+	color: $mediumGray;
+	font-size: 15px;
+  font-family: $paris;
+  font-size: 20px;
+  font-weight: bold;
+  color: $black;
+}
+#menu li:hover ul.subMenu {
+	display: block
+}
+#menu ul.subMenu a:hover{
+	color: $trolleyGray;
+}
+@media screen and (max-width: 800px){
+	#menu {position:relative}
+	#menu ul {background:$darkGray;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none}
+	#menu ul.subMenu {width:100%;position:static;}
+	#menu ul.subMenu a {padding-left:30px;}
+	#menu li {display:block;float:none;width:auto;}
+	#menu input, #menu label {position:absolute;top:0;left:0;display:block}
+	#menu input {z-index:4}
+	#menu input:checked + label {color:$white}
+	#menu input:checked + label:before {content:"\00d7"}
+	#menu input:checked ~ ul {display:block}
+}
+
+#youTubeVideos {
+
+position:fixed;
+bottom: 0;
+top: 10;
+left: 30px;
+z-index: 1;
+width: 420px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+#contactUsMessage ul {
+  list-style-type: none;
+}
+
+#contactUs button {
+
+  display: block;
+  line-height: 38px;
+  padding: 0 14px;
+  text-decoration: none;
+  color: $trolleyGray;
+  font-size: 15px;
+  border: none;
+  font-family: sans-serif;
+  font-weight: normal;
+}
+
+#homeButton button {
+
+  display: block;
+  line-height: 38px;
+  padding: 0 14px;
+  text-decoration: none;
+  color: $trolleyGray;
+  font-size: 15px;
+  border: none;
+  font-family: sans-serif;
+  font-weight: normal;
+}
+
+#contactUsMessage {
+display: flex;
+justify-content: center;
+align-items: flex-end;
+width: 550px;
+height: 200px;
+margin: auto;
+background: $pinktransparent;
+margin-top: 250px;
+border-radius: 5px;
+font-family: $ovo;
+font-weight: bold;
+
+}
+
+#cM3 {
+display:flex;
+justify-content: flex-end;
+margin-bottom: 0
+}
+
+#cM4 {
+display:flex;
+justify-content: flex-end;
+font-family: $monsieur;
+font-weight: bold;
+font-size:30px;
+margin-bottom: 0
+}
