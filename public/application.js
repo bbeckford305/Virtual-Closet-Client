@@ -16916,6 +16916,8 @@ var onChangePasswordRequest = function onChangePasswordRequest(event) {
   $('#instagramPost').hide();
   $('#garmentView').hide();
   $('#contactUsMessage').hide();
+  $('#garmentAreaMessage').hide();
+  $('#garmentArea').hide();
 };
 $('#changePasswordButton1').on('click', onChangePasswordRequest);
 
