@@ -176,6 +176,8 @@ $('#entryButton').on('click', onEnterCloset)
 
 // user clicks to add garment
 const onAddGarmentButton = (event) => {
+  $('#garmentAreaMessage').hide()
+  $('#garmentArea').hide()
   $('#garmentUpdate').hide()
   $('#garmentUpdateForm').hide()
   $('#garmentIDForm').hide()
