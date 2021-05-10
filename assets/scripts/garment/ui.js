@@ -78,7 +78,7 @@ const onGarmentSearchFailure = function () {
 //
 const onGarmentUpdateSuccess = function (response) {
   // document.getElementById(`${store.garment.id}`)
-  store.user.garment = response.garment
+  // store.user.garment = response.garment
   // const garment = response.garment
   // $('#garmentView').html('')
   $('#message').text('Garment Has Been Updated')
@@ -97,7 +97,7 @@ const onGarmentUpdateSuccess = function (response) {
 }
 //
 const onGarmentUpdateFailure = function () {
-  $('#message').text('Garment Has Been Updated')
+  $('#message').text('Garment Not Updated')
   $('#garmentUpdateForm').trigger('reset')
 
   setTimeout(function () {
